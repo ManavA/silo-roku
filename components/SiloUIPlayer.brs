@@ -784,6 +784,10 @@ function PlayerRecoverNativeVersion() as Boolean
 end function
 
 function PlayerCompletionDurationMs() as Double
+    return PlayerTimelineDurationMs(false)
+end function
+
+function PlayerTimelineDurationMs(metadataFallback = true as Boolean) as Double
     if m.playPlan = invalid then return 0
     if type(m.playVersions) = "roArray"
         matches = 0
@@ -800,6 +804,11 @@ function PlayerCompletionDurationMs() as Double
             if matches = 1 and duration > 0 and duration <= 604800000# then return duration
             return 0
         end if
+    end if
+    if metadataFallback
+        duration = NumberOr(m.playPlan.durationMs,0)
+        if duration <= 0 and m.playItem <> invalid then duration = NumberOr(m.playItem.durationMs,0)
+        if duration > 0 and duration <= 604800000# then return duration
     end if
     duration = NumberOr(m.video.duration,0)*1000#
     if duration <= 0 then return 0
@@ -1561,10 +1570,7 @@ end sub
 
 ' Pause-screen actions are the documented entry point when Video owns Options.
 function PlayerCurrentCue() as Object
-    duration = NumberOr(m.playItem.durationMs, 0)
-    if duration <= 0 and m.video.duration > 0
-        duration = m.video.duration * 1000 + NumberOr(m.playPlan.timelineOffsetMs, 0)
-    end if
+    duration = PlayerTimelineDurationMs()
     cue = SiloUIPlayerCue(m.playMarkers, PlayerPositionMs(), duration, m.playNext <> invalid, m.upNextDismissed)
     if type(m.preferences) = "roAssociativeArray"
         if m.preferences.introSkipMode = "never" then cue.introEndMs = 0

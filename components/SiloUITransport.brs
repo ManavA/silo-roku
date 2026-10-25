@@ -57,9 +57,7 @@ function TransportDuration() as Double
     if m.playPlan <> invalid
         if m.playPlan.transport = "silo_compat" then return SiloUICompatDuration()
     end if
-    duration = NumberOr(m.playItem.durationMs, 0)
-    if duration <= 0 then duration = NumberOr(m.video.duration, 0) * 1000# + NumberOr(m.playPlan.timelineOffsetMs, 0)
-    return duration
+    return PlayerTimelineDurationMs()
 end function
 
 function TransportKey(key as String) as Boolean

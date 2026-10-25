@@ -93,7 +93,7 @@ class CompatTransportDuration(unittest.TestCase):
         from tools.brightscript import run_brightscript
         root=Path(__file__).resolve().parents[1]
         with TemporaryDirectory() as td:
-            text=run_brightscript([root/'components/SiloUITransport.brs',root/'source/core/SiloUIFormat.brs'],'''
+            text=run_brightscript([root/'components/SiloUITransport.brs',root/'components/SiloUIPlayer.brs',root/'source/core/SiloUIFormat.brs'],'''
                 m.playPlan={transport:"native",timelineOffsetMs:5000}
                 m.playItem={durationMs:60000}:m.video={duration:14}
                 catalog=TransportDuration():m.playItem.durationMs=0
