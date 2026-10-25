@@ -1,0 +1,71 @@
+{
+  "protocol_version": 3,
+  "plan_id": "plan-fixture-01",
+  "plan_attempt_key": "opaque-attempt-key-01",
+  "session_id": "session-fixture-01",
+  "delivery": "original_http",
+  "stream": {
+    "protocol": "http_progressive",
+    "container": "mkv",
+    "url": "https://silo.example/api/v3/playback/sessions/session-fixture-01/stream",
+    "headers": {},
+    "header_refresh": "none"
+  },
+  "selected_tracks": {
+    "audio": {
+      "id": "file:731:audio:1",
+      "index": 1
+    }
+  },
+  "source": {
+    "media_file_id": "731",
+    "container": "mkv",
+    "video_codec": "hevc",
+    "video_profile": "main 10",
+    "video_level": 153,
+    "bit_depth": 10,
+    "color_range": "tv",
+    "width": 3840,
+    "height": 2160,
+    "frame_rate": 23.976023976023978,
+    "bitrate_kbps": 54000,
+    "dynamic_range": "dolby_vision",
+    "hdr10_plus": false,
+    "dolby_vision_profile": 7,
+    "dolby_vision_level": 6,
+    "dv_bl_compat_id": 6,
+    "dv_base_layer_proven": true,
+    "dv_enhancement_layer": "unknown",
+    "audio_codec": "ac3",
+    "audio_channels": 6,
+    "audio_layout": "5.1(side)"
+  },
+  "effective_recipe": {
+    "video_codec": "hevc",
+    "audio_codec": "ac3",
+    "width": 3840,
+    "height": 2160,
+    "frame_rate": 23.976023976023978,
+    "bitrate_kbps": 54000,
+    "dynamic_range": "dolby_vision",
+    "audio_channels": 6,
+    "audio_layout": "5.1(side)"
+  },
+  "transformations": [],
+  "runtime_corrections": [],
+  "available_qualities": [
+    {
+      "label": "original",
+      "height": 2160,
+      "bitrate_kbps": 54000,
+      "preserves_source": true
+    }
+  ],
+  "decision_reason": "client_managed_dynamic_range",
+  "requested_media_file_id": "731",
+  "effective_media_file_id": "731",
+  "subtitle": {
+    "mode": "off",
+    "inventory": []
+  }
+}

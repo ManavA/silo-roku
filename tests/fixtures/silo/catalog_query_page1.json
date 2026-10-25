@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "content_id": "c1",
+      "genres": [
+        "Drama"
+      ],
+      "keywords": [
+        "family"
+      ],
+      "status": "available",
+      "title": "Test Movie",
+      "type": "movie",
+      "user_state": {
+        "played": true,
+        "in_watchlist": false,
+        "is_favorite": false
+      }
+    }
+  ],
+  "page": {
+    "has_more": true,
+    "next_cursor": "next-page"
+  },
+  "total": 1,
+  "total_exact": true,
+  "window_cursor": "window-1"
+}

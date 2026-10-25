@@ -1,0 +1,6 @@
+[
+  {"items":[{"content_id":"episode:a","title":"Synthetic Finale","season_number":1,"episode_number":9,"runtime":20,"files":[]}]},
+  {"items":[{"content_id":"season:a","title":"Localized Season A","season_number":1,"episode_count":1},{"content_id":"season:b","title":"Localized Season B","season_number":2,"episode_count":1}]},
+  {"items":[{"content_id":"episode:b","title":"Synthetic Premiere","season_number":2,"episode_number":1,"runtime":20,"files":[]}]},
+  {"content_id":"episode:b","title":"Synthetic Premiere","type":"episode","series_id":"series:a","season_number":2,"episode_number":1,"runtime":20,"versions":[{"file_id":"file:b","container":"mp4","codec_video":"h264","codec_audio":"aac"}]}
+]

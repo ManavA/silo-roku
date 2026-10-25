@@ -1,0 +1,28 @@
+Rating marks identify the source of server-supplied scores. IMDb and its logo
+are trademarks of IMDb.com, Inc. TMDB and its logo belong to The Movie Database.
+Rotten Tomatoes, Tomatometer, Popcornmeter and the tomato/popcorn marks belong
+to Fandango Media, LLC. These marks are not covered by this repository's source
+license. No endorsement or trademark license is asserted.
+
+Provenance (2026-10-16): rasterized unmodified public brand SVG artwork from the
+read-only Silo iOS reference at Sources/SiloTV/Resources/Brand.xcassets:
+ rating-imdb.imageset/imdb.svg -> imdb.png
+ rating-tmdb.imageset/tmdb.svg -> tmdb.png
+ rating-rt-fresh.imageset/rt-fresh.svg -> rt-fresh.png
+ rating-rt-rotten.imageset/rt-rotten.svg -> rt-rotten.png
+ rating-rt-audience-fresh.imageset/rt-audience-fresh.svg -> rt-audience-fresh.png
+ rating-rt-audience-rotten.imageset/rt-audience-rotten.svg -> rt-audience-rotten.png
+This reference snapshot has no .git metadata; source checksums are recorded in
+README.md. No title artwork, account information or credentials were copied.
+Conversion: rsvg-convert -a -w 96 -h 64 -o OUTPUT SOURCE (transparent PNG,
+original colors and aspect ratio). No AI-generated or redrawn brand artwork.
+
+Official source/meaning and brand guidance:
+ https://brand.imdb.com/imdb
+ https://www.themoviedb.org/about/logos-attribution
+ https://www.rottentomatoes.com/about
+ https://www.rottentomatoes.com/help_desk/licensing
+RT marks are ordinary positive/negative tomato/popcorn marks, never Certified
+Fresh or Verified Hot. A score alone cannot establish either certification.
+No publication/signing authorization or brand-use approval is implied by these
+local development assets. Official brand pages do not grant a blanket license.

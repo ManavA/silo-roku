@@ -1,0 +1,51 @@
+{
+  "outcome": "plan",
+  "protocol_version": 3,
+  "server_features": [
+    "seek_reanchor_v1"
+  ],
+  "session_id": "sess-1",
+  "playback_plan": {
+    "plan_id": "plan-0001",
+    "plan_attempt_key": "plan-key-0001",
+    "delivery": "original_http",
+    "stream": {
+      "url": "https://silo.example/test",
+      "protocol": "original_http",
+      "headers": {},
+      "header_refresh": "none",
+      "container": "mkv"
+    },
+    "timeline": {
+      "source_start_seconds": 0,
+      "stream_origin_seconds": 0,
+      "player_start_seconds": 12.5,
+      "timeline_offset_seconds": 0,
+      "can_seek_anywhere": true,
+      "seek_restoration": "exact"
+    },
+    "selected_tracks": {
+      "audio": {
+        "id": "a1"
+      }
+    },
+    "available_qualities": [
+      {
+        "label": "original",
+        "preserves_source": true
+      }
+    ],
+    "degradation_warnings": [],
+    "decision_reason": "direct_play",
+    "requested_media_file_id": "f1",
+    "effective_media_file_id": "f1",
+    "source": {
+      "media_file_id": "f1",
+      "hdr10_plus": false,
+      "dv_enhancement_layer": "",
+      "video_codec": "hevc",
+      "width": 3840,
+      "height": 2160
+    }
+  }
+}

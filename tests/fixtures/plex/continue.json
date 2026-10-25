@@ -1,0 +1,21 @@
+{
+  "MediaContainer": {
+    "size": 1,
+    "Metadata": [
+      {
+        "ratingKey": "101",
+        "type": "episode",
+        "title": "Pilot",
+        "index": 1,
+        "parentIndex": 1,
+        "grandparentRatingKey": "100",
+        "grandparentTitle": "Sample Show",
+        "parentRatingKey": "110",
+        "thumb": "/library/metadata/101/thumb/3000",
+        "grandparentThumb": "/library/metadata/100/thumb/2000",
+        "duration": 2700000,
+        "viewOffset": 900000
+      }
+    ]
+  }
+}

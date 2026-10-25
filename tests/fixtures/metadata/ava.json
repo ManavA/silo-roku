@@ -1,0 +1,9 @@
+{
+  "reply": "A few synthetic choices.",
+  "matches": [
+    {"title": "Synthetic Moon", "mediaType": "movie", "tmdbId": "101", "imdbId": "tt0000101", "token": "must-be-omitted"},
+    {"title": "Synthetic Stars", "mediaType": "tv", "tmdbId": "202"},
+    {"title": "Unknown type", "mediaType": "person", "tmdbId": "303"},
+    {"title": "Missing type", "tmdbId": "404"}
+  ]
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="PersonPhotoTask" extends="Task">
+  <interface>
+    <field id="job" type="assocarray" />
+    <field id="cleanupPaths" type="array" />
+    <field id="result" type="assocarray" />
+    <field id="cancelled" type="boolean" value="false" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/source/core/ServerUrlPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/auth/SessionPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/auth/SessionStore.brs" />
+  <script type="text/brightscript" uri="pkg:/source/adapters/SiloAdapter.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/ArtworkPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/network/Http.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/PersonPhotoPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/PersonPhotoTask.brs" />
+</component>

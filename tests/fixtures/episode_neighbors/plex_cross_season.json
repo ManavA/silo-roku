@@ -1,0 +1,6 @@
+[
+  {"MediaContainer":{"offset":0,"totalSize":1,"Metadata":[{"ratingKey":"101","type":"episode","title":"Synthetic Finale","parentRatingKey":"110","grandparentRatingKey":"100","parentIndex":1,"index":9}]}},
+  {"MediaContainer":{"offset":0,"totalSize":2,"Metadata":[{"ratingKey":"110","type":"season","title":"Localized Season A","parentRatingKey":"100","index":1},{"ratingKey":"210","type":"season","title":"Localized Season B","parentRatingKey":"100","index":2}]}},
+  {"MediaContainer":{"offset":0,"totalSize":1,"Metadata":[{"ratingKey":"201","type":"episode","title":"Synthetic Premiere","parentRatingKey":"210","grandparentRatingKey":"100","parentIndex":2,"index":1}]}},
+  {"MediaContainer":{"Metadata":[{"ratingKey":"201","type":"episode","title":"Synthetic Premiere","parentRatingKey":"210","grandparentRatingKey":"100","parentIndex":2,"index":1,"Media":[{"id":"901","container":"mp4","videoCodec":"h264","audioCodec":"aac","Part":[{"id":"902","key":"/library/parts/902/file.mp4","container":"mp4"}]}]}]}}
+]

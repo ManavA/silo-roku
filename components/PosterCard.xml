@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RowList/MarkupGrid item: artwork-first card with quality, rating and progress. -->
+<component name="PosterCard" extends="Group">
+  <interface>
+    <field id="itemContent" type="node" onChange="onContent" />
+    <field id="width" type="float" onChange="onLayout" />
+    <field id="height" type="float" onChange="onLayout" />
+    <field id="focusPercent" type="float" onChange="onFocus" />
+    <field id="rowFocusPercent" type="float" />
+    <field id="itemHasFocus" type="boolean" />
+    <field id="rowHasFocus" type="boolean" onChange="onFocus" />
+    <field id="rowListHasFocus" type="boolean" onChange="onFocus" />
+    <field id="gridHasFocus" type="boolean" onChange="onFocus" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUIFormat.brs" />
+  <script type="text/brightscript" uri="pkg:/components/PosterCard.brs" />
+  <children>
+    <Poster id="bg" uri="pkg:/images/ui/card_bg.9.png" />
+    <Label id="fallback" color="0xC9D1E0FF" wrap="true" maxLines="3" horizAlign="center" vertAlign="center" />
+    <Poster id="art" loadDisplayMode="scaleToZoom" />
+    <Group id="chips">
+      <Poster id="chipLeftBg" uri="pkg:/images/ui/chip.9.png" />
+      <Label id="chipLeft" color="0xFFFFFFFF" horizAlign="center" vertAlign="center" />
+      <Poster id="chipRightBg" uri="pkg:/images/ui/chip.9.png" />
+      <Label id="chipRight" color="0xF5C518FF" horizAlign="center" vertAlign="center" />
+    </Group>
+    <Poster id="codecBg" uri="pkg:/images/ui/chip.9.png" visible="false" />
+    <Label id="codec" color="0xFFFFFFFF" horizAlign="center" vertAlign="center" maxLines="1" />
+    <Rectangle id="progressTrack" color="0x00000099" height="4" />
+    <Rectangle id="progress" color="0x7CCBFFFF" height="4" />
+    <Label id="caption" color="0xE8ECF4FF" />
+    <Group id="focusBorder" visible="false">
+      <Rectangle id="focusTop" height="2" color="0xFFFFFFFF" />
+      <Rectangle id="focusBottom" height="2" color="0xFFFFFFFF" />
+      <Rectangle id="focusLeft" width="2" color="0xFFFFFFFF" />
+      <Rectangle id="focusRight" width="2" color="0xFFFFFFFF" />
+    </Group>
+  </children>
+</component>

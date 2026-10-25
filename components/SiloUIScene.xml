@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Silo TV shell: full-bleed artwork, top pill navigation, poster rails, detail and player. -->
+<component name="SiloUIScene" extends="Scene">
+  <interface>
+    <function name="handleTransport" />
+    <field id="launchInput" type="assocarray" alwaysNotify="true" />
+    <field id="memoryPressure" type="integer" />
+    <field id="appearanceMode" type="string" value="oled" />
+    <field id="appFocused" type="boolean" value="true" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/source/core/SiloNativeBearerTransport.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/RuntimeIdentity.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUIFormat.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/PublicArtworkPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIArtwork.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUIPlexPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIScene.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIAccessibility.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUILaunchPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUILaunch.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUIAppearancePolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIAppearance.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIRobustness.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUICompatPlayback.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloCompatCapability.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloCompatPlaybackPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloAutoAudioPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/adapters/SiloCompatAdapter.brs" />
+  <script type="text/brightscript" uri="pkg:/source/adapters/SiloAdapter.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIHome.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIStreaming.brs" />
+  <script type="text/brightscript" uri="pkg:/source/adapters/MetadataAdapter.brs" />
+  <script type="text/brightscript" uri="pkg:/source/auth/MetadataStore.brs" />
+  <script type="text/brightscript" uri="pkg:/source/auth/SessionStore.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/MetadataUiPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/ServicePolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUIDetailPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIDetail.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIPlayer.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIVoice.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUISeekReanchor.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUISubtitleArtifact.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUITransport.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUITrickplay.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUITrickplayPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/ArtworkPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUITransportPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIDiagnostics.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUIDiagnosticsPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUIOriginalPlaybackPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUISignInPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUISignIn.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIOnboarding.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIDialogs.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SearchPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUILibrary.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUILibraries.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUIAudioPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIAudio.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIEbook.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIEbookBrowse.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIServices.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUIPlayerPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloPlaybackPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloOriginalPlaybackPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/TrackPreference.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUIHomePolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/HomeCachePolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUISettingsPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUISettings.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUIHomeSectionsPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIHomeSections.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIPlaybackChoices.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIShuffle.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUIPlaybackChoicesPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUINavigationPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUINavigation.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUIRatingPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIRatings.brs" />
+  <children>
+    <!-- Empty peer leaf owns focus for manually painted zones. -->
+    <Group id="manualFocus" />
+    <Rectangle id="base" width="1280" height="720" color="0x000000FF" />
+    <Poster id="backdropOld" width="1280" height="720" loadDisplayMode="scaleToZoom" loadWidth="1280" loadHeight="720" />
+    <Poster id="backdrop" width="1280" height="720" loadDisplayMode="scaleToZoom" loadWidth="1280" loadHeight="720" opacity="0" />
+    <Animation id="backdropFade" duration="0.35" easeFunction="linear">
+      <FloatFieldInterpolator key="[0.0, 1.0]" keyValue="[0.0, 1.0]" fieldToInterp="backdrop.opacity" />
+    </Animation>
+    <Rectangle id="appearanceWash" width="1280" height="720" color="0x00000000" />
+    <Poster id="fadeLeft" uri="pkg:/images/ui/fade_left.png" width="900" height="720" />
+    <Poster id="fadeBottom" uri="pkg:/images/ui/fade_bottom.png" translation="[0,260]" width="1280" height="460" />
+    <Poster id="fadeTop" uri="pkg:/images/ui/fade_top.png" width="1280" height="110" />
+
+    <!-- Home -->
+    <Group id="home" visible="false">
+      <Group id="homeRetryButtons" translation="[970,372]" visible="false" />
+      <Group id="hero" translation="[56,118]">
+        <Poster id="heroLogo" loadDisplayMode="scaleToFit" />
+        <Label id="heroTitle" width="620" wrap="true" maxLines="2" color="0xFFFFFFFF" />
+        <Label id="heroMeta" width="700" color="0xD6DCE8FF" />
+        <Label id="heroRatings" visible="false" />
+        <Group id="heroRatingChips" />
+        <Label id="heroSummary" width="560" wrap="true" maxLines="3" color="0xC3CBDAFF" />
+      </Group>
+      <Group id="heroButtons" />
+      <Group id="heroDots" translation="[1110,390]" />
+      <RowList id="rows" translation="[56,436]" itemComponentName="PosterCard"
+               numRows="2" rowFocusAnimationStyle="fixedFocusWrap" vertFocusAnimationStyle="fixedFocus"
+               drawFocusFeedback="false"
+               showRowLabel="[true]" rowLabelColor="0xF2F4F8FF" rowLabelOffset="[[0,8]]" />
+    </Group>
+
+    <Group id="ebook" visible="false">
+      <Rectangle width="1280" height="720" color="0x101010FF" />
+      <Label id="ebookTitle" translation="[96,38]" width="1088" height="48" color="0xECE8DFFF" />
+      <Label id="ebookBody" translation="[96,108]" width="1088" height="470" wrap="true" color="0xECE8DFFF" />
+      <Label id="ebookStatus" translation="[96,630]" width="1088" height="50" wrap="true" color="0xC6C0B4FF" />
+    </Group>
+    <Group id="audio" visible="false" translation="[96,190]">
+      <Label id="audioTitle" width="1080" height="110" wrap="true" color="0xFFFFFFFF" />
+      <Label id="audioStatus" translation="[0,140]" width="1080" height="110" wrap="true" maxLines="3" color="0xFFFFFFFF" />
+      <Label id="audioHint" translation="[0,300]" width="1080" height="110" wrap="true" maxLines="3" color="0xD6DCE8FF" text="OK / Play: pause or resume · Left / Right: 30 seconds&#10;Up / Down: sleep timer, chapters and stop · Back: return" />
+    </Group>
+    <Audio id="audioNode" notificationInterval="1" />
+    <Timer id="seekReanchorTimer" duration="0.25" repeat="true" />
+    <Timer id="audioTimer" duration="1" repeat="true" />
+
+    <Group id="streaming" visible="false">
+      <Label id="streamingTitle" translation="[56,116]" width="1168" height="48" color="0xFFFFFFFF" />
+      <Label id="streamingStatus" translation="[56,172]" width="1168" height="64" wrap="true" maxLines="2" color="0xC3CBDAFF" />
+      <Group id="streamingButtons" translation="[56,246]" />
+      <MarkupGrid id="streamingGrid" translation="[56,316]" itemComponentName="PosterCard" itemSize="[150,225]" itemSpacing="[20,24]" numColumns="7" numRows="1" drawFocusFeedback="false" />
+    </Group>
+
+    <!-- Detail -->
+    <Group id="detail" visible="false">
+      <Rectangle id="detailAppearancePanel" width="1280" height="720" color="0x000000B3" />
+      <Group id="detailBody" translation="[56,96]">
+        <Poster id="detailLogo" loadDisplayMode="scaleToFit" />
+        <Label id="detailTitle" width="700" wrap="true" maxLines="2" color="0xFFFFFFFF" />
+        <Label id="detailSub" width="760" color="0xE8ECF4FF" />
+        <Label id="detailMeta" width="760" color="0xC3CBDAFF" />
+        <Label id="detailQuality" width="760" color="0xFFFFFFFF" />
+        <Group id="detailButtons" />
+        <Group id="detailRatings" />
+        <Label id="detailSummary" width="760" wrap="true" maxLines="3" color="0xC3CBDAFF" />
+      </Group>
+      <Group id="detailCompact" translation="[56,96]" visible="false">
+        <Label id="detailCompactTitle" width="1100" height="56" wrap="true" maxLines="2" color="0xFFFFFFFF" />
+        <Label id="detailCompactMeta" translation="[0,60]" width="1100" height="26" color="0xE8ECF4FF" />
+        <Label id="detailCompactSummary" translation="[0,92]" width="760" height="72" wrap="true" maxLines="3" color="0xE8ECF4FF" />
+      </Group>
+      <Group id="detailLowerViewport" translation="[36,284]" clippingRect="[0,0,1188,400]">
+        <Group id="detailLowerContent" translation="[20,0]">
+          <Label id="seasonsLabel" text="Seasons" color="0xF2F4F8FF" />
+          <Group id="detailSeasonViewport" clippingRect="[0,0,1168,40]">
+            <Group id="seasonPills" />
+          </Group>
+          <Label id="episodesLabel" color="0xF2F4F8FF" />
+          <RowList id="episodes" itemComponentName="PosterCard" numRows="1"
+                   rowFocusAnimationStyle="floatingFocus" drawFocusFeedback="false" showRowLabel="[false]" />
+          <Label id="detailCastLabel" text="Cast" color="0xFFFFFFFF" />
+          <RowList id="detailCast" itemComponentName="CastCard" numRows="1" showRowLabel="false" drawFocusFeedback="false" />
+          <Label id="detailSimilarLabel" text="More like this" color="0xFFFFFFFF" />
+          <RowList id="detailSimilar" itemComponentName="PosterCard" numRows="1" rowFocusAnimationStyle="floatingFocus" drawFocusFeedback="false" showRowLabel="[false]" />
+        </Group>
+      </Group>
+    </Group>
+
+    <!-- Library grid -->
+    <Group id="libraries" visible="false">
+      <Label id="librariesTitle" translation="[56,100]" width="1168" color="0xFFFFFFFF" />
+      <Group id="librariesButtons" translation="[56,150]" />
+      <Label id="librariesStatus" translation="[56,198]" width="1168" height="40" color="0xC3CBDAFF" />
+      <LabelList id="librariesList" translation="[56,250]" itemSize="[1100,54]" numRows="7" />
+      <RowList id="librariesRows" translation="[56,250]" itemComponentName="PosterCard" numRows="2"
+        rowFocusAnimationStyle="fixedFocusWrap" vertFocusAnimationStyle="fixedFocus"
+        drawFocusFeedback="false" showRowLabel="[true]" rowLabelColor="0xF2F4F8FF" rowLabelOffset="[[0,8]]" />
+    </Group>
+    <Group id="library" visible="false">
+      <Group id="libraryRetryButtons" translation="[1000,100]" visible="false" />
+      <Label id="libraryTitle" translation="[56,100]" color="0xFFFFFFFF" />
+      <Group id="libraryTabs" translation="[56,142]" />
+      <MarkupGrid id="grid" translation="[56,196]" itemComponentName="PosterCard" numColumns="7" numRows="3"
+                  itemSize="[150,225]" itemSpacing="[22,26]" drawFocusFeedback="false" vertFocusAnimationStyle="fixedFocusWrap" />
+      <Label id="libraryEmpty" translation="[56,240]" color="0xC3CBDAFF" />
+    </Group>
+
+    <Group id="audioBrowse" visible="false">
+      <Label id="audioBrowseTitle" translation="[56,100]" width="1168" height="40" text="Audiobooks" color="0xFFFFFFFF" />
+      <Group id="audioBrowseButtons" translation="[56,142]" />
+      <MarkupGrid id="audioBrowseGrid" translation="[56,196]" itemComponentName="PosterCard" numColumns="7" numRows="3"
+                  itemSize="[150,225]" itemSpacing="[22,26]" drawFocusFeedback="false" vertFocusAnimationStyle="fixedFocusWrap" />
+      <Label id="audioBrowseStatus" translation="[600,146]" width="620" height="42" color="0xC3CBDAFF" />
+    </Group>
+
+    <Group id="ebookBrowse" visible="false">
+      <Label id="ebookBrowseTitle" translation="[56,100]" width="1168" height="40" text="Books" color="0xFFFFFFFF" />
+      <Group id="ebookBrowseButtons" translation="[56,142]" />
+      <MarkupGrid id="ebookBrowseGrid" translation="[56,196]" itemComponentName="PosterCard" numColumns="7" numRows="3"
+                  itemSize="[150,225]" itemSpacing="[22,26]" drawFocusFeedback="false" vertFocusAnimationStyle="fixedFocusWrap" />
+      <Label id="ebookBrowseStatus" translation="[430,138]" width="790" height="56" wrap="true" color="0xC3CBDAFF" />
+    </Group>
+
+    <!-- Search -->
+    <Group id="search" visible="false">
+      <MiniKeyboard id="keyboard" translation="[56,110]" />
+      <MarkupGrid id="searchGrid" translation="[480,150]" itemComponentName="PosterCard" numColumns="4" numRows="3"
+                  itemSize="[150,225]" itemSpacing="[22,20]" drawFocusFeedback="false" />
+      <Label id="searchHint" translation="[480,110]" width="740" wrap="true" color="0xC3CBDAFF" />
+    </Group>
+
+    <!-- Onboarding -->
+    <Group id="onboarding" visible="false">
+      <Rectangle id="appearancePanel" translation="[56,24]" width="1168" height="660" color="0x000000FF" />
+      <Rectangle id="brandLogoPanel" translation="[88,40]" width="171" height="96" color="0x071D35FF" />
+      <Poster id="obSiloLogo" translation="[96,48]" width="154.4" height="80" uri="pkg:/images/brand/silo-wordmark-white.png" loadDisplayMode="scaleToFit" />
+      <Label id="obEyebrow" translation="[96,150]" text="Welcome" color="0x7CCBFFFF" />
+      <Label id="obTitle" translation="[96,182]" width="1000" wrap="true" color="0xFFFFFFFF" />
+      <Label id="obBody" translation="[96,250]" width="1000" wrap="true" color="0xC3CBDAFF" />
+      <Group id="obQr" translation="[866,290]" visible="false" />
+      <Label id="obCode" translation="[96,340]" color="0x7CCBFFFF" />
+      <Group id="obChoiceViewport" translation="[96,450]" clippingRect="[0,0,1088,230]">
+        <LabelList id="obButtons" itemSize="[650,46]" numRows="5" />
+      </Group>
+      <Label id="obMore" translation="[96,652]" width="1000" height="28" font="font:SmallSystemFont" color="0xC3CBDAFF" text="Use Up/Down for more options" visible="false" />
+    </Group>
+
+    <!-- Top navigation stays above content -->
+    <Group id="nav" visible="false">
+      <Group id="navDrawer" visible="false">
+        <Rectangle id="navDrawerBackground" width="248" height="720" color="0x080C1499" />
+        <Group id="drawerItems" translation="[32,132]" />
+      </Group>
+      <Group id="navMenu" translation="[56,24]" visible="false">
+        <Poster id="navMenuFocus" uri="pkg:/images/ui/card_focus.9.png" width="28" height="28" opacity="0" />
+        <Label id="navMenuLabel" width="28" height="28" horizAlign="center" vertAlign="center" color="0xFFFFFFFF" />
+      </Group>
+      <Group id="avatar" translation="[56,24]">
+        <Poster id="avatarBg" uri="pkg:/images/ui/pill.9.png" width="44" height="44" />
+        <Label id="avatarText" width="44" height="44" horizAlign="center" vertAlign="center" color="0xFFFFFFFF" />
+      </Group>
+      <Group id="navPills" translation="[0,24]" />
+      <Poster id="navSiloLogo" translation="[1147,24]" width="77.2" height="40" uri="pkg:/images/brand/silo-wordmark-white.png" loadDisplayMode="scaleToFit" />
+      <Label id="navSource" translation="[1000,36]" width="126" horizAlign="right" color="0x9AA4B8FF" />
+    </Group>
+
+    <Video id="video" width="1280" height="720" visible="false" enableUI="true" notificationInterval="1" />
+    <Group id="playerCue" visible="false" translation="[800,500]">
+      <Poster id="playerCueBackground" uri="pkg:/images/ui/button.9.png" width="420" height="160" />
+      <Poster id="nextStill" translation="[12,12]" width="160" height="90" loadDisplayMode="scaleToFit" />
+      <Label id="playerCueTitle" translation="[184,16]" width="220" height="64" wrap="true" maxLines="2" color="0x101725FF" />
+      <Label id="playerCueText" translation="[12,112]" width="396" height="38" font="font:SmallSystemFont" vertAlign="center" color="0x101725FF" />
+    </Group>
+    <Group id="playerDiagnostics" visible="false" translation="[48,40]">
+      <Rectangle width="1000" height="660" color="0x101725F2" />
+      <Label id="playerDiagnosticsText" translation="[24,20]" width="952" height="620" font="font:SmallSystemFont" wrap="true" numLines="18" color="0xFFFFFFFF" />
+    </Group>
+    <Timer id="diagnosticsTimer" duration="1" repeat="true" />
+    <Group id="playerTracks" visible="false" translation="[320,100]">
+      <Rectangle width="640" height="520" color="0x101725FF" />
+      <Label text="Audio and subtitles" translation="[24,16]" width="590" />
+      <LabelList id="playerTrackList" translation="[24,76]" itemSize="[590,48]" numRows="8" />
+    </Group>
+    <Group id="playerTransport" visible="false" translation="[64,530]">
+      <Poster translation="[-32,-22]" width="1216" height="200" uri="pkg:/images/ui/transport_backdrop.png" loadDisplayMode="scaleToFit" />
+      <Group id="transportThumbnailClip" visible="false" translation="[448,-158]" clippingRect="[0,0,240,136]">
+        <Poster id="transportThumbnail" loadDisplayMode="limitSize" />
+      </Group>
+      <Label id="transportTitle" translation="[28,12]" width="1096" height="32" color="0xFFFFFFFF" />
+      <Label id="transportTime" translation="[28,48]" width="1096" height="28" color="0xD6DCE8FF" />
+      <Rectangle translation="[28,84]" width="1080" height="4" color="0xD3DEEA60" />
+      <Rectangle id="transportProgress" translation="[28,84]" width="0" height="4" color="0xAED6F1FF" />
+      <Group id="transportActions" translation="[28,102]" />
+      <Label id="transportHint" translation="[28,106]" width="1096" height="36" color="0xFFFFFFFF" />
+    </Group>
+    <Group id="playerChapters" visible="false" translation="[280,100]">
+      <Rectangle width="720" height="520" color="0x101725FF" />
+      <Label text="Chapters" translation="[24,16]" width="672" height="36" color="0xFFFFFFFF" />
+      <LabelList id="playerChapterList" translation="[24,76]" itemSize="[672,48]" numRows="8" />
+    </Group>
+    <Timer id="transportTimer" duration="1" repeat="true" />
+    <Timer id="heroTimer" duration="10" repeat="true" />
+    <Timer id="upNextTimer" duration="1" repeat="true" />
+    <Group id="playerStatusPanel" visible="false" translation="[320,278]">
+      <Rectangle width="640" height="164" color="0x596879CC" />
+      <Rectangle translation="[1,1]" width="638" height="162" color="0x081019F2" />
+      <Label id="playerStatusTitle" translation="[28,18]" width="584" height="36" color="0xFFFFFFFF" font="font:MediumSystemFont" />
+      <Label id="playerStatusDetail" translation="[28,62]" width="584" height="54" wrap="true" maxLines="2" color="0xD6DFEAFF" font="font:SmallSystemFont" />
+      <Label text="Back · Cancel" translation="[28,126]" width="584" height="26" color="0xFFFFFFFF" font="font:SmallSystemFont" />
+    </Group>
+    <Label id="toast" translation="[56,660]" width="1168" color="0xFFD479FF" />
+    <Timer id="publicArtworkTimer" duration="0.24" repeat="false" />
+    <Timer id="backdropTimer" duration="0.3" repeat="false" />
+    <Timer id="pollTimer" duration="5" repeat="false" />
+    <Timer id="originalPlaybackTimer" duration="1" repeat="true" />
+    <Timer id="subtitleChangeTimer" duration="1" repeat="true" />
+    <Timer id="progressTimer" duration="10" repeat="true" />
+    <Timer id="obEntryTimer" duration="1" repeat="false" />
+    <Timer id="toastTimer" duration="4" repeat="false" />
+  </children>
+</component>

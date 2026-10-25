@@ -1,0 +1,5 @@
+{"MediaContainer":{"size":3,"Hub":[
+  {"type":"movie","Metadata":[{"ratingKey":"1","type":"movie","title":"Example Movie"},{"type":"movie","title":"No Native ID"}]},
+  {"type":"artist","Metadata":[{"ratingKey":"7","type":"artist","title":"Music"}]},
+  {"type":"show","Metadata":[{"ratingKey":"100","type":"show","title":"Example Show"}]}
+]}}

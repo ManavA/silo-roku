@@ -1,0 +1,31 @@
+{
+  "MediaContainer": {
+    "Metadata": [
+      {
+        "ratingKey": "1", "type": "movie", "title": "Fixture Movie", "duration": 7200000,
+        "guid": "plex://movie/global-movie-a",
+        "Guid": [
+          {"id": "tmdb://603"}, {"id": "imdb://tt0133093"}, {"id": "tvdb://123"},
+          {"id": "tmdb://603"}, {"id": "tmdb://603?X-Plex-Token=unsafe-guid-token"},
+          {"id": "https://unsafe-guid-token@example.test"}, {"id": "plex://movie/global-movie-a"}
+        ],
+        "Marker": [
+          {"type": "intro", "startTimeOffset": 30000, "endTimeOffset": 90000, "final": false},
+          {"type": "credits", "startTimeOffset": 7100000, "endTimeOffset": 7200000, "final": true},
+          {"type": "credits", "startTimeOffset": 7200000, "endTimeOffset": 7100000, "final": true}
+        ],
+        "Role": [
+          {"id": 7, "tag": "Fixture Actor", "role": "The Guide", "thumb": "/library/metadata/7/thumb/1000"},
+          {"id": 9, "tag": ""}
+        ],
+        "Director": [{"id": 8, "tag": "Fixture Director", "thumb": "https://image.example.test/headshot?X-Plex-Token=unsafe-image-token"}],
+        "Extras": {"Metadata": [
+          {"ratingKey": "501", "type": "clip", "subtype": "trailer", "title": "Fixture Trailer", "duration": 90000, "thumb": "/library/metadata/501/thumb/1000"},
+          {"ratingKey": "502", "type": "clip", "subtype": "featurette", "title": "Behind the Scenes", "duration": 180000},
+          {"type": "clip", "subtype": "trailer", "title": "Missing Native Identity"},
+          {"ratingKey": "503?token=unsafe", "type": "clip", "subtype": "trailer", "title": "Unsafe Identity"}
+        ]}
+      }
+    ]
+  }
+}

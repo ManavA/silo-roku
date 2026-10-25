@@ -1,0 +1,11 @@
+{
+  "id": "person-1",
+  "name": "Test Actor",
+  "bio": "A synthetic biography.",
+  "birth_date": "1970-01-01",
+  "birthplace": "Example City",
+  "photo_url": "https://images.example/actor.jpg",
+  "photo_thumbhash": "synthetic-photo-hash",
+  "tmdb_id": "700",
+  "imdb_id": "nm0000001"
+}

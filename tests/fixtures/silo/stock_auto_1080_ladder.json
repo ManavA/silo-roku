@@ -1,0 +1,1846 @@
+{
+ "detail": {
+  "themes": {
+   "owner_id": "fixture-item",
+   "items": []
+  },
+  "content_id": "fixture-item",
+  "play_content_id": "fixture-item",
+  "type": "movie",
+  "title": "Fixture title",
+  "year": 2026,
+  "genres": [],
+  "keywords": [],
+  "status": "",
+  "overlay_summary": {
+   "resolution": "2160p",
+   "hdr": "DV HDR10",
+   "audio": "Atmos",
+   "audio_channels": "5.1",
+   "video_codec": "H.265",
+   "container": "MKV",
+   "aspect_ratio": "16:9",
+   "multi_sub": true
+  },
+  "user_state": {
+   "played": false,
+   "is_favorite": false,
+   "in_watchlist": false
+  },
+  "cast": [],
+  "crew": [],
+  "versions": [
+   {
+    "file_id": "731",
+    "file_name": "fixture.mkv",
+    "file_path": "/fixture/fixture.mkv",
+    "resolution": "2160p",
+    "codec_video": "hevc",
+    "codec_audio": "eac3",
+    "hdr": true,
+    "container": "mkv",
+    "file_size": 15772441499,
+    "duration": 6506,
+    "bitrate": 19394,
+    "added_at": "2026-10-21T00:00:00Z",
+    "effective_audio_track_index": 0,
+    "effective_audio_language": "en",
+    "video_tracks": [
+     {
+      "title": "Fixture title",
+      "codec": "hevc",
+      "dolby_vision": "Profile 8",
+      "dv_profile": 8,
+      "dv_level": 6,
+      "dv_bl_compat_id": 1,
+      "dv_config_present": true,
+      "dv_bl_compat_id_present": true,
+      "dv_bl_present": true,
+      "dv_rpu_present": true,
+      "dv_enhancement_layer": "none",
+      "profile": "Main 10",
+      "level": 150,
+      "width": 3840,
+      "height": 2160,
+      "aspect_ratio": "16:9",
+      "interlaced": false,
+      "frame_rate": "23.976",
+      "video_range": "DolbyVision",
+      "video_range_type": "DOVIWithHDR10",
+      "color_range": "tv",
+      "color_primaries": "bt2020",
+      "color_space": "bt2020nc",
+      "color_transfer": "smpte2084",
+      "bit_depth": 10,
+      "pixel_format": "yuv420p10le"
+     }
+    ],
+    "audio_tracks": [
+     {
+      "title": "Fixture title",
+      "language": "en",
+      "codec": "eac3",
+      "profile": "Dolby Digital Plus + Dolby Atmos",
+      "layout": "5.1(side)",
+      "channels": 6,
+      "bitrate": 768,
+      "sample_rate": 48000,
+      "default": true
+     }
+    ],
+    "subtitle_tracks": [
+     {
+      "index": 2,
+      "language": "en",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 3,
+      "language": "en",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "embedded_title": "SDH",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 4,
+      "language": "ar",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 5,
+      "language": "cs",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 6,
+      "language": "da",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 7,
+      "language": "de",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 8,
+      "language": "el",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 9,
+      "language": "es",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "embedded_title": "Latin American",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 10,
+      "language": "es",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 11,
+      "language": "fi",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 12,
+      "language": "fil",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 13,
+      "language": "fr",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 14,
+      "language": "he",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 15,
+      "language": "hr",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 16,
+      "language": "hu",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 17,
+      "language": "id",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 18,
+      "language": "it",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 19,
+      "language": "ja",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 20,
+      "language": "ko",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 21,
+      "language": "ms",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 22,
+      "language": "nb",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 23,
+      "language": "nl",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 24,
+      "language": "pl",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 25,
+      "language": "pt",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "embedded_title": "Brazilian",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 26,
+      "language": "pt",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 27,
+      "language": "ro",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 28,
+      "language": "ru",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 29,
+      "language": "sv",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 30,
+      "language": "th",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 31,
+      "language": "tr",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 32,
+      "language": "uk",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 33,
+      "language": "vi",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 34,
+      "language": "zh",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "embedded_title": "Simplified",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     },
+     {
+      "index": 35,
+      "language": "zh",
+      "codec": "subrip",
+      "title": "Fixture title",
+      "embedded_title": "Traditional",
+      "forced": false,
+      "default": false,
+      "hearing_impaired": false,
+      "external": false
+     }
+    ]
+   }
+  ],
+  "playback_variants": [
+   {
+    "variant_id": "fixture-variant",
+    "part_count": 1,
+    "total_duration": 6506,
+    "default_file_id": "731",
+    "parts": [
+     {
+      "part_index": 1,
+      "default_file_id": "731",
+      "total_duration": 6506,
+      "versions": [
+       {
+        "file_id": "731",
+        "file_name": "fixture.mkv",
+        "file_path": "/fixture/fixture.mkv",
+        "resolution": "2160p",
+        "codec_video": "hevc",
+        "codec_audio": "eac3",
+        "hdr": true,
+        "container": "mkv",
+        "file_size": 15772441499,
+        "duration": 6506,
+        "bitrate": 19394,
+        "added_at": "2026-10-21T00:00:00Z",
+        "effective_audio_track_index": 0,
+        "effective_audio_language": "en",
+        "video_tracks": [
+         {
+          "title": "Fixture title",
+          "codec": "hevc",
+          "dolby_vision": "Profile 8",
+          "dv_profile": 8,
+          "dv_level": 6,
+          "dv_bl_compat_id": 1,
+          "dv_config_present": true,
+          "dv_bl_compat_id_present": true,
+          "dv_bl_present": true,
+          "dv_rpu_present": true,
+          "dv_enhancement_layer": "none",
+          "profile": "Main 10",
+          "level": 150,
+          "width": 3840,
+          "height": 2160,
+          "aspect_ratio": "16:9",
+          "interlaced": false,
+          "frame_rate": "23.976",
+          "video_range": "DolbyVision",
+          "video_range_type": "DOVIWithHDR10",
+          "color_range": "tv",
+          "color_primaries": "bt2020",
+          "color_space": "bt2020nc",
+          "color_transfer": "smpte2084",
+          "bit_depth": 10,
+          "pixel_format": "yuv420p10le"
+         }
+        ],
+        "audio_tracks": [
+         {
+          "title": "Fixture title",
+          "language": "en",
+          "codec": "eac3",
+          "profile": "Dolby Digital Plus + Dolby Atmos",
+          "layout": "5.1(side)",
+          "channels": 6,
+          "bitrate": 768,
+          "sample_rate": 48000,
+          "default": true
+         }
+        ],
+        "subtitle_tracks": [
+         {
+          "index": 2,
+          "language": "en",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 3,
+          "language": "en",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "embedded_title": "SDH",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 4,
+          "language": "ar",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 5,
+          "language": "cs",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 6,
+          "language": "da",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 7,
+          "language": "de",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 8,
+          "language": "el",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 9,
+          "language": "es",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "embedded_title": "Latin American",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 10,
+          "language": "es",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 11,
+          "language": "fi",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 12,
+          "language": "fil",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 13,
+          "language": "fr",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 14,
+          "language": "he",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 15,
+          "language": "hr",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 16,
+          "language": "hu",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 17,
+          "language": "id",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 18,
+          "language": "it",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 19,
+          "language": "ja",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 20,
+          "language": "ko",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 21,
+          "language": "ms",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 22,
+          "language": "nb",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 23,
+          "language": "nl",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 24,
+          "language": "pl",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 25,
+          "language": "pt",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "embedded_title": "Brazilian",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 26,
+          "language": "pt",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 27,
+          "language": "ro",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 28,
+          "language": "ru",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 29,
+          "language": "sv",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 30,
+          "language": "th",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 31,
+          "language": "tr",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 32,
+          "language": "uk",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 33,
+          "language": "vi",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 34,
+          "language": "zh",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "embedded_title": "Simplified",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         },
+         {
+          "index": 35,
+          "language": "zh",
+          "codec": "subrip",
+          "title": "Fixture title",
+          "embedded_title": "Traditional",
+          "forced": false,
+          "default": false,
+          "hearing_impaired": false,
+          "external": false
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "ratings": [],
+  "subtitles": [
+   {
+    "source": "embedded",
+    "language": "ja",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "pl",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "id",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "fi",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "ru",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "vi",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "ar",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "fr",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "hu",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "ms",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "th",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "uk",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "zh",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "nb",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "ro",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "cs",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "da",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "de",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "fil",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "he",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "hr",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "pt",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "tr",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "el",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "ko",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "sv",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "en",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "es",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "nl",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   },
+   {
+    "source": "embedded",
+    "language": "it",
+    "codec": "subrip",
+    "forced": false,
+    "hearing_impaired": false,
+    "title": "Fixture title"
+   }
+  ],
+  "effective_subtitle_mode": "off"
+ },
+ "capabilities": {
+  "revision": "fixture-revision",
+  "state": "available",
+  "allowed": true,
+  "installation_id": "server-install",
+  "protocol_versions": [
+   3
+  ],
+  "features": [
+   "playback_plan_v3",
+   "server_remote_stream_bitrate_policy_v1",
+   "server_local_stream_bitrate_policy_v1",
+   "neutral_playback_v3_contract_v1",
+   "embedded_subtitles_v1",
+   "layout_aware_passthrough",
+   "playback_route_diagnostics",
+   "device_quirks_v1",
+   "seek_reanchor_v1",
+   "output_change_v1",
+   "output_display_evidence_v1",
+   "direct_stream_resume_v1",
+   "header_authenticated_media_v1",
+   "authorized_media_origins_v1",
+   "software_video_decode_v1",
+   "plan_invalidated_v1",
+   "plan_source_duration_v1",
+   "subrip_sidecar_v1",
+   "marker_thumbnails_v1",
+   "sequenced_progress_v1",
+   "fixed_media_file_v1",
+   "marker_segments_v1",
+   "trickplay_v1",
+   "bandwidth_probe_v1"
+  ],
+  "deliveries": [
+   "original_http",
+   "server_remux_progressive",
+   "server_remux_hls",
+   "server_transcode_hls"
+  ]
+ },
+ "original_response": {
+  "status": 201,
+  "decision": {
+   "protocol_version": 3,
+   "server_features": [
+    "playback_plan_v3",
+    "server_remote_stream_bitrate_policy_v1",
+    "server_local_stream_bitrate_policy_v1",
+    "neutral_playback_v3_contract_v1",
+    "embedded_subtitles_v1",
+    "layout_aware_passthrough",
+    "playback_route_diagnostics",
+    "device_quirks_v1",
+    "seek_reanchor_v1",
+    "output_change_v1",
+    "output_display_evidence_v1",
+    "direct_stream_resume_v1",
+    "header_authenticated_media_v1",
+    "authorized_media_origins_v1",
+    "software_video_decode_v1",
+    "plan_invalidated_v1",
+    "plan_source_duration_v1",
+    "subrip_sidecar_v1",
+    "marker_thumbnails_v1"
+   ],
+   "outcome": "adaptation_unavailable",
+   "terminal": {
+    "reason": "transcode_start_failed",
+    "message": "Fixture warning",
+    "retryable": false
+   }
+  }
+ },
+ "fallback_response": {
+  "status": 201,
+  "decision": {
+   "protocol_version": 3,
+   "server_features": [
+    "playback_plan_v3",
+    "server_remote_stream_bitrate_policy_v1",
+    "server_local_stream_bitrate_policy_v1",
+    "neutral_playback_v3_contract_v1",
+    "embedded_subtitles_v1",
+    "layout_aware_passthrough",
+    "playback_route_diagnostics",
+    "device_quirks_v1",
+    "seek_reanchor_v1",
+    "output_change_v1",
+    "output_display_evidence_v1",
+    "direct_stream_resume_v1",
+    "header_authenticated_media_v1",
+    "authorized_media_origins_v1",
+    "software_video_decode_v1",
+    "plan_invalidated_v1",
+    "plan_source_duration_v1",
+    "subrip_sidecar_v1",
+    "marker_thumbnails_v1"
+   ],
+   "outcome": "playable",
+   "session_id": "fixture-session",
+   "playback_plan": {
+    "protocol_version": 3,
+    "plan_id": "fixture-plan",
+    "plan_attempt_key": "fixture-plan-key",
+    "session_id": "fixture-session",
+    "expires_at": "2026-10-21T00:00:00Z",
+    "delivery": "server_transcode_hls",
+    "stream": {
+     "url": "https://silo.example/fixture/media.m3u8",
+     "protocol": "hls",
+     "container": "hls",
+     "mime_type": "application/vnd.apple.mpegurl",
+     "headers": {},
+     "header_refresh": "none"
+    },
+    "timeline": {
+     "source_start_seconds": 0,
+     "stream_origin_seconds": 0,
+     "player_start_seconds": 0,
+     "timeline_offset_seconds": 0,
+     "can_seek_anywhere": true,
+     "seek_restoration": "player_position"
+    },
+    "selected_tracks": {
+     "audio": {
+      "id": "file:731:audio:0",
+      "index": 0
+     }
+    },
+    "effective_recipe": {
+     "video_codec": "h264",
+     "audio_codec": "aac",
+     "width": 1920,
+     "height": 1080,
+     "frame_rate": 23.976,
+     "bitrate_kbps": 6000,
+     "dynamic_range": "sdr",
+     "audio_channels": 2,
+     "audio_layout": "stereo"
+    },
+    "claims": {
+     "video": {
+      "hdr10": false,
+      "hdr10_plus": false,
+      "hlg": false,
+      "dolby_vision": false
+     },
+     "audio": {
+      "codec": "aac",
+      "passthrough": false,
+      "atmos_preserved": false,
+      "reason": "server_audio_adaptation"
+     },
+     "subtitles": {
+      "ass_styling_preserved": false,
+      "bitmap_overlay": false,
+      "bitmap_sidecar": false
+     }
+    },
+    "subtitle": {
+     "mode": "off",
+     "inventory": [
+      {
+       "track_id": "file:731:subtitle:0",
+       "combined_index": 0,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "en",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:1",
+       "combined_index": 1,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "en",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:2",
+       "combined_index": 2,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "ar",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:3",
+       "combined_index": 3,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "cs",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:4",
+       "combined_index": 4,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "da",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:5",
+       "combined_index": 5,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "de",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:6",
+       "combined_index": 6,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "el",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:7",
+       "combined_index": 7,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "es",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:8",
+       "combined_index": 8,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "es",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:9",
+       "combined_index": 9,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "fi",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:10",
+       "combined_index": 10,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "fil",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:11",
+       "combined_index": 11,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "fr",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:12",
+       "combined_index": 12,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "he",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:13",
+       "combined_index": 13,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "hr",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:14",
+       "combined_index": 14,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "hu",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:15",
+       "combined_index": 15,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "id",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:16",
+       "combined_index": 16,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "it",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:17",
+       "combined_index": 17,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "ja",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:18",
+       "combined_index": 18,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "ko",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:19",
+       "combined_index": 19,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "ms",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:20",
+       "combined_index": 20,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "nb",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:21",
+       "combined_index": 21,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "nl",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:22",
+       "combined_index": 22,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "pl",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:23",
+       "combined_index": 23,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "pt",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:24",
+       "combined_index": 24,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "pt",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:25",
+       "combined_index": 25,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "ro",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:26",
+       "combined_index": 26,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "ru",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:27",
+       "combined_index": 27,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "sv",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:28",
+       "combined_index": 28,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "th",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:29",
+       "combined_index": 29,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "tr",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:30",
+       "combined_index": 30,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "uk",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:31",
+       "combined_index": 31,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "vi",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:32",
+       "combined_index": 32,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "zh",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      },
+      {
+       "track_id": "file:731:subtitle:33",
+       "combined_index": 33,
+       "source": "embedded",
+       "codec": "subrip",
+       "language": "zh",
+       "label": "Fixture track",
+       "forced": false,
+       "default": false,
+       "hearing_impaired": false,
+       "delivery": "sidecar",
+       "url": "https://silo.example/fixture/subtitle"
+      }
+     ]
+    },
+    "transformations": [
+     {
+      "name": "video_to_h264",
+      "executor": "server",
+      "recipe_version": "2",
+      "validated_claims": [
+       "h264_decode"
+      ]
+     },
+     {
+      "name": "audio_to_aac",
+      "executor": "server",
+      "recipe_version": "4",
+      "validated_claims": [
+       "audio_decode"
+      ]
+     },
+     {
+      "name": "hdr_to_sdr_tonemap",
+      "executor": "server",
+      "recipe_version": "1",
+      "validated_claims": [
+       "hdr_metadata_removed",
+       "sdr_bt709_output"
+      ]
+     }
+    ],
+    "applied_quirks": [],
+    "runtime_corrections": [],
+    "available_qualities": [
+     {
+      "label": "original",
+      "display_name": "Original",
+      "height": 2160,
+      "bitrate_kbps": 19394,
+      "preserves_source": true
+     },
+     {
+      "label": "2160p-low",
+      "display_name": "4K Low",
+      "height": 2160,
+      "bitrate_kbps": 10000,
+      "preserves_source": false
+     },
+     {
+      "label": "1080p-high",
+      "display_name": "1080p High",
+      "height": 1080,
+      "bitrate_kbps": 10000,
+      "preserves_source": false
+     },
+     {
+      "label": "1080p-medium",
+      "display_name": "1080p Medium",
+      "height": 1080,
+      "bitrate_kbps": 6000,
+      "preserves_source": false
+     },
+     {
+      "label": "1080p-low",
+      "display_name": "1080p Low",
+      "height": 1080,
+      "bitrate_kbps": 3000,
+      "preserves_source": false
+     },
+     {
+      "label": "720p-high",
+      "display_name": "720p High",
+      "height": 720,
+      "bitrate_kbps": 4000,
+      "preserves_source": false
+     },
+     {
+      "label": "720p-medium",
+      "display_name": "720p Medium",
+      "height": 720,
+      "bitrate_kbps": 2000,
+      "preserves_source": false
+     },
+     {
+      "label": "720p-low",
+      "display_name": "720p Low",
+      "height": 720,
+      "bitrate_kbps": 1500,
+      "preserves_source": false
+     },
+     {
+      "label": "480p",
+      "display_name": "480p",
+      "height": 480,
+      "bitrate_kbps": 1500,
+      "preserves_source": false
+     }
+    ],
+    "degradation_warnings": [
+     {
+      "code": "hdr_tone_mapped",
+      "message": "Fixture warning"
+     }
+    ],
+    "decision_reason": "quality_fixed_rung",
+    "requested_media_file_id": "731",
+    "effective_media_file_id": "731",
+    "source": {
+     "media_file_id": "731",
+     "duration_seconds": 6506,
+     "container": "mkv",
+     "video_codec": "hevc",
+     "video_profile": "main 10",
+     "video_level": 150,
+     "bit_depth": 10,
+     "color_range": "tv",
+     "width": 3840,
+     "height": 2160,
+     "frame_rate": 23.976,
+     "bitrate_kbps": 19394,
+     "dynamic_range": "dolby_vision",
+     "hdr10_plus": false,
+     "dolby_vision_profile": 8,
+     "dolby_vision_level": 6,
+     "dv_bl_compat_id": 1,
+     "dv_base_layer_proven": true,
+     "dv_enhancement_layer": "none",
+     "audio_codec": "eac3",
+     "audio_channels": 6,
+     "audio_layout": "5.1(side)"
+    },
+    "subtitle_fidelity_policy": "require_authored_fidelity"
+   }
+  }
+ }
+}

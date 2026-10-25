@@ -1,0 +1,7 @@
+{
+  "content_id": "fixture-item",
+  "type": "movie",
+  "title": "Synthetic small artwork fixture",
+  "poster_url": "https://cdn.example.test/small/poster.jpg?X-Amz-Signature=synthetic-fixture-only",
+  "backdrop_url": "https://cdn.example.test/small/backdrop.png?X-Amz-Signature=synthetic-fixture-only"
+}

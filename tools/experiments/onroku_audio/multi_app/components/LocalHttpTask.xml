@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="LocalHttpTask" extends="Task">
+<interface>
+<!-- Caller supplies this in memory before RUN. Never package/persist credentials. -->
+<field id="stockContext" type="assocarray" />
+<field id="stockOnly" type="boolean" value="false" />
+<field id="drainState" type="string" value="pending" />
+<field id="seekRequest" type="assocarray" alwaysNotify="true" />
+<field id="seekOffer" type="assocarray" alwaysNotify="true" />
+<field id="seekAck" type="assocarray" alwaysNotify="true" />
+<field id="playbackUpdate" type="assocarray" alwaysNotify="true" />
+<field id="playbackPosition" type="float" value="0" />
+<field id="rollingMode" type="boolean" value="false" />
+<field id="ready" type="boolean" value="false" />
+<field id="failed" type="boolean" value="false" />
+<field id="stopRequested" type="boolean" value="false" />
+</interface>
+<script type="text/brightscript" uri="pkg:/source/RemoteIngest.brs" />
+<script type="text/brightscript" uri="pkg:/source/SiloNativeBearerTransport.brs" />
+<script type="text/brightscript" uri="pkg:/source/StockDescriptor.brs" />
+<script type="text/brightscript" uri="pkg:/source/Rolling.brs" />
+<script type="text/brightscript" uri="pkg:/source/RollingTelemetry.brs" />
+<script type="text/brightscript" uri="pkg:/source/SeekPolicy.brs" />
+<script type="text/brightscript" uri="pkg:/source/SeekHandoff.brs" />
+<script type="text/brightscript" uri="pkg:/source/FileExtract.brs" />
+<script type="text/brightscript" uri="pkg:/source/HttpPolicy.brs" />
+<script type="text/brightscript" uri="pkg:/source/ExtractAudio.brs" />
+<script type="text/brightscript" uri="pkg:/source/MultiPolicy.brs" />
+<script type="text/brightscript" uri="pkg:/source/StopPolicy.brs" />
+<script type="text/brightscript" uri="pkg:/source/AdmissionPolicy.brs" />
+<script type="text/brightscript" uri="pkg:/components/LocalHttpTask.brs" />
+</component>

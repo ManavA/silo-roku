@@ -1,0 +1,11 @@
+{
+  "outcome": "terminal",
+  "protocol_version": 3,
+  "server_features": [],
+  "session_id": "sess-2",
+  "terminal": {
+    "reason": "no_playable_source",
+    "message": "No playable source is available for this title.",
+    "retryable": false
+  }
+}

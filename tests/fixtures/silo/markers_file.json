@@ -1,0 +1,7 @@
+{
+  "file_id": "f1",
+  "intro": {"start_seconds": 30, "end_seconds": 90.5, "source": "provider"},
+  "recap": {"start_seconds": 0, "end_seconds": 12.5, "source": "manual"},
+  "credits": {"start_seconds": 6900, "end_seconds": 7080, "source": "provider"},
+  "preview": {}
+}

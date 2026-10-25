@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="LocalHttpTask" extends="Task">
+<interface>
+<field id="ready" type="boolean" value="false" />
+<field id="failed" type="boolean" value="false" />
+<field id="stopRequested" type="boolean" value="false" />
+</interface>
+<script type="text/brightscript" uri="pkg:/source/HttpPolicy.brs" />
+<script type="text/brightscript" uri="pkg:/source/ExtractAudio.brs" />
+<script type="text/brightscript" uri="pkg:/components/LocalHttpTask.brs" />
+</component>

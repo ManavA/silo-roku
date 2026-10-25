@@ -1,0 +1,10 @@
+{
+  "service": "home",
+  "fetchedAtEpochMs": 1791763200000,
+  "rows": [{"id": "synthetic-picks", "title": "Synthetic Picks", "source": "synthetic/public",
+    "items": [
+      {"tmdbId": "101", "imdbId": "tt0000101", "type": "movie", "title": "Synthetic Moon", "releaseYear": 2026, "releaseDate": "2026-10-12", "posterPath": "/synthetic-moon.jpg", "backdropPath": "/synthetic-moon-wide.jpg", "overview": "A synthetic catalog fixture.", "rank": 1, "ratings": {"tmdb": 8.1}, "unknown_token": "must-be-omitted"},
+      {"tmdbId": "202", "tvdbId": "302", "type": "show", "title": "Synthetic Stars", "releaseYear": 2025, "posterPath": null, "rank": 2}
+    ]
+  }]
+}

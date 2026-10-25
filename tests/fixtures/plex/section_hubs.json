@@ -1,0 +1,10 @@
+{
+  "MediaContainer": {
+    "Hub": [
+      {"hubIdentifier": "home.continueWatching", "title": "Continue watching", "type": "movie", "Metadata": [{"ratingKey": "101", "type": "movie", "title": "History fixture"}]},
+      {"hubIdentifier": "home.onDeck", "title": "On deck", "type": "episode", "Metadata": [{"ratingKey": "102", "type": "episode", "title": "Episode fixture"}]},
+      {"hubIdentifier": "movie.recentlyadded", "title": "Recently added", "type": "movie", "Metadata": [{"ratingKey": "301", "type": "movie", "title": "Recent fixture", "year": 2026}]},
+      {"hubIdentifier": "movie.toprated", "title": "Top rated", "type": "movie", "Metadata": [{"ratingKey": "401", "type": "movie", "title": "Rated fixture", "year": 2025}]}
+    ]
+  }
+}

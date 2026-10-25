@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="SiloCompatTask" extends="Task">
+  <interface>
+    <field id="command" type="assocarray" />
+    <field id="result" type="assocarray" />
+    <field id="privateBinding" type="assocarray" />
+    <field id="privateStockContext" type="assocarray" />
+    <field id="cancelled" type="boolean" value="false" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/source/core/SiloNativeBearerTransport.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/RuntimeIdentity.brs" />
+  <script type="text/brightscript" uri="pkg:/source/auth/SessionPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/auth/SessionStore.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/ServerUrlPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloPlaybackPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloOriginalPlaybackPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloAutoAudioPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloCompatCapability.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloCompatPlaybackPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/adapters/SiloAdapter.brs" />
+  <script type="text/brightscript" uri="pkg:/source/adapters/SiloServices.brs" />
+  <script type="text/brightscript" uri="pkg:/source/adapters/SiloCompatAdapter.brs" />
+  <script type="text/brightscript" uri="pkg:/source/network/Http.brs" />
+  <script type="text/brightscript" uri="pkg:/components/TaskSiloSubtitleFetch.brs" />
+  <script type="text/brightscript" uri="pkg:/components/TaskSiloCompatSubtitle.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloCompatTask.brs" />
+</component>

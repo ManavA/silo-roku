@@ -1,0 +1,18 @@
+{
+  "plex": {
+    "sourceId": "plex:fixture-server",
+    "profileId": "fixture-owner",
+    "baseUrl": "https://server.example.test",
+    "accountToken": "synthetic-account-token",
+    "token": "synthetic-server-token",
+    "accountId": "fixture-account"
+  },
+  "silo": {
+    "sourceId": "silo:https://silo.example.test",
+    "profileId": "fixture-profile",
+    "baseUrl": "https://silo.example.test",
+    "accessToken": "synthetic-access-token",
+    "refreshToken": "synthetic-refresh-token",
+    "profileToken": "synthetic-profile-token"
+  }
+}

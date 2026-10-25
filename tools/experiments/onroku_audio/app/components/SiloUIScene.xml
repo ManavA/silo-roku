@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="SiloUIScene" extends="Scene">
+<script type="text/brightscript" uri="pkg:/components/SiloUIScene.brs" />
+<children>
+<Video id="video" width="1280" height="720" />
+<Rectangle width="1280" height="100" color="0x111111dd" />
+<Label id="status" translation="[30,15]" width="1220" height="90" font="font:SmallSystemFont" text="Preparing bounded private transport probe" />
+</children>
+</component>

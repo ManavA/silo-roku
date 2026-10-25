@@ -1,0 +1,28 @@
+{
+  "sections": [
+    {
+      "customized": false,
+      "featured": true,
+      "id": "sec1",
+      "is_custom": false,
+      "item_limit": 20,
+      "items": [
+        {
+          "content_id": "c1",
+          "genres": [
+            "Drama"
+          ],
+          "keywords": [],
+          "status": "available",
+          "title": "Test Movie",
+          "type": "movie",
+          "position_seconds": 12.5,
+          "duration_seconds": 120
+        }
+      ],
+      "section_type": "continue_watching",
+      "title": "Continue Watching",
+      "total_count": 1
+    }
+  ]
+}

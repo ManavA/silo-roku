@@ -1,0 +1,104 @@
+{
+  "MediaContainer": {
+    "size": 1,
+    "Metadata": [
+      {
+        "ratingKey": "1",
+        "type": "movie",
+        "title": "Sample Movie",
+        "year": 2020,
+        "originallyAvailableAt": "2020-05-01",
+        "summary": "A sample movie summary.",
+        "tagline": "A tale of testing.",
+        "duration": 7200000,
+        "contentRating": "PG-13",
+        "studio": "Test Studios",
+        "guid": "com.plexapp.agents.themoviedb://603?lang=en",
+        "Guid": [
+          { "id": "tmdb://603" },
+          { "id": "imdb://tt0133093" }
+        ],
+        "thumb": "/library/metadata/1/thumb/1000",
+        "art": "/library/metadata/1/art/1000",
+        "Image": [
+          { "type": "coverPoster", "url": "/library/metadata/1/thumb/1000" },
+          { "type": "clearLogo", "url": "/library/metadata/1/clearLogo/1000" }
+        ],
+        "Genre": [ { "tag": "Science Fiction" }, { "tag": "Action" } ],
+        "Rating": [
+          { "image": "imdb://image.rating", "value": 8.7, "type": "audience" },
+          { "image": "rottentomatoes://image.rating.ripe", "value": 9.0, "type": "critic" },
+          { "image": "rottentomatoes://image.rating.upright", "value": 8.5, "type": "audience" }
+        ],
+        "viewCount": 0,
+        "librarySectionKey": "1",
+        "librarySectionTitle": "Movies",
+        "Marker": [
+          { "type": "intro", "startTimeOffset": 30000, "endTimeOffset": 90000 },
+          { "type": "credits", "startTimeOffset": 7100000, "endTimeOffset": 7200000 }
+        ],
+        "Media": [
+          {
+            "id": "2001",
+            "width": 3840,
+            "height": 2160,
+            "videoCodec": "hevc",
+            "audioCodec": "truehd",
+            "audioChannels": 8,
+            "audioProfile": "atmos",
+            "bitrate": 60000,
+            "container": "mkv",
+            "duration": 7200000,
+            "videoFrameRate": "24p",
+            "DOVIPresent": true,
+            "DOVIProfile": 8,
+            "DOVILevel": 6,
+            "Part": [
+              {
+                "id": "3001",
+                "key": "/library/parts/3001/file.mkv",
+                "duration": 7200000,
+                "container": "mkv",
+                "Stream": [
+                  { "id": "4001", "streamType": 1, "codec": "hevc" },
+                  {
+                    "id": "4002",
+                    "streamType": 2,
+                    "codec": "truehd",
+                    "channels": 8,
+                    "displayTitle": "TrueHD Atmos 7.1",
+                    "default": true
+                  },
+                  { "id": "4003", "streamType": 3, "codec": "srt", "language": "English", "default": true }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2002",
+            "width": 1920,
+            "height": 1080,
+            "videoCodec": "h264",
+            "audioCodec": "aac",
+            "audioChannels": 2,
+            "bitrate": 8000,
+            "container": "mp4",
+            "duration": 7200000,
+            "Part": [
+              {
+                "id": "3002",
+                "key": "/library/parts/3002/file.mp4",
+                "duration": 7200000,
+                "container": "mp4",
+                "Stream": [
+                  { "id": "4004", "streamType": 1, "codec": "h264" },
+                  { "id": "4005", "streamType": 2, "codec": "aac", "channels": 2, "default": true }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

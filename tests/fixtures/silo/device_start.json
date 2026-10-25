@@ -1,0 +1,14 @@
+{
+  "client_purpose": "device_login",
+  "device_code": "synthetic-device-code",
+  "device_name": "Living room TV",
+  "device_platform": "tvos",
+  "expires_at": "2026-01-02T03:14:05.678Z",
+  "expires_in": 600,
+  "interval": 5,
+  "match_code": "42",
+  "temporary": false,
+  "user_code": "ABCD-1234",
+  "verification_uri": "https://silo.example/test",
+  "verification_uri_complete": "https://silo.example/test"
+}

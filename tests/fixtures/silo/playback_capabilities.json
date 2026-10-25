@@ -1,0 +1,16 @@
+{
+  "allowed": true,
+  "deliveries": [
+    "original_http",
+    "server_remux_hls"
+  ],
+  "features": [
+    "remote_playback"
+  ],
+  "installation_id": "server-install",
+  "protocol_versions": [
+    3
+  ],
+  "revision": "r1",
+  "state": "available"
+}

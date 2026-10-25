@@ -1,0 +1,18 @@
+{
+  "poll_after": 5,
+  "profile_id": "p1",
+  "profile_token": "synthetic-profile",
+  "status": "approved",
+  "temporary": false,
+  "tokens": {
+    "access_token": "synthetic-access",
+    "expires_in": 3600,
+    "refresh_token": "synthetic-refresh",
+    "user": {
+      "email": "viewer@example.test",
+      "id": "u1",
+      "role": "user",
+      "username": "Test Viewer"
+    }
+  }
+}

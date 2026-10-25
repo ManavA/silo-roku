@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="SiloUIQrTask" extends="Task">
+  <interface>
+    <field id="job" type="assocarray" />
+    <field id="result" type="assocarray" alwaysNotify="true" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUISignInPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUIQrTask.brs" />
+</component>

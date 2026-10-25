@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "enabled": true,
+      "id": "lib1",
+      "name": "Test Viewer",
+      "sort_order": 0,
+      "type": "movie"
+    }
+  ],
+  "page": {
+    "has_more": false
+  }
+}

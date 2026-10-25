@@ -1,0 +1,9 @@
+{
+  "items": [
+    {"content_id": "c2", "type": "movie", "title": "Similar Movie", "status": "available",
+     "genres": [], "keywords": [], "duration_seconds": 120, "position_seconds": 12.5,
+     "user_state": {"played": true, "is_favorite": false, "in_watchlist": false}},
+    {"content_id": "series1", "type": "series", "title": "Similar Series", "status": "available",
+     "genres": [], "keywords": []}
+  ]
+}

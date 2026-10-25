@@ -1,0 +1,141 @@
+{
+  "protocol_version": 3,
+  "outcome": "playable",
+  "session_id": "session-fixture-01",
+  "playback_plan": {
+    "protocol_version": 3,
+    "plan_id": "plan-fixture-01",
+    "plan_attempt_key": "opaque-attempt-key-01",
+    "session_id": "session-fixture-01",
+    "delivery": "server_remux_hls",
+    "stream": {
+      "protocol": "hls",
+      "container": "hls",
+      "url": "/api/v2/playback/transcode/synthetic-fixture/master.m3u8",
+      "headers": {},
+      "header_refresh": "none"
+    },
+    "selected_tracks": {
+      "audio": {
+        "id": "file:731:audio:0",
+        "index": 0
+      }
+    },
+    "source": {
+      "media_file_id": "731",
+      "container": "mkv",
+      "video_codec": "hevc",
+      "video_profile": "main 10",
+      "video_level": 150,
+      "bit_depth": 10,
+      "color_range": "tv",
+      "width": 3840,
+      "height": 2160,
+      "frame_rate": 23.976023976023978,
+      "bitrate_kbps": 54000,
+      "dynamic_range": "dolby_vision",
+      "hdr10_plus": false,
+      "dolby_vision_profile": 8,
+      "dolby_vision_level": 6,
+      "dv_bl_compat_id": 1,
+      "dv_base_layer_proven": true,
+      "dv_enhancement_layer": "none",
+      "audio_codec": "eac3",
+      "audio_channels": 6,
+      "audio_layout": "5.1(side)"
+    },
+    "effective_recipe": {
+      "video_codec": "hevc",
+      "audio_codec": "eac3",
+      "width": 3840,
+      "height": 2160,
+      "frame_rate": 23.976023976023978,
+      "bitrate_kbps": 54000,
+      "dynamic_range": "hdr10",
+      "audio_channels": 6,
+      "audio_layout": "5.1(side)",
+      "video_sample_entry": "hvc1"
+    },
+    "transformations": [
+      {
+        "name": "server_dv7_to_hdr10",
+        "executor": "server",
+        "recipe_version": "2",
+        "validated_claims": [
+          "dolby_vision_metadata_removed",
+          "hdr10_base_layer_preserved",
+          "enhancement_layer_discarded"
+        ]
+      },
+      {
+        "name": "hls_separate_audio",
+        "executor": "server",
+        "recipe_version": "1",
+        "validated_claims": null
+      }
+    ],
+    "runtime_corrections": [],
+    "available_qualities": [],
+    "decision_reason": "container_normalization",
+    "requested_media_file_id": "731",
+    "effective_media_file_id": "731",
+    "subtitle": {
+      "mode": "off",
+      "inventory": []
+    },
+    "timeline": {
+      "player_start_seconds": 0,
+      "timeline_offset_seconds": 0,
+      "can_seek_anywhere": true,
+      "source_start_seconds": 0,
+      "stream_origin_seconds": 0,
+      "seek_restoration": "none"
+    },
+    "applied_quirks": [],
+    "degradation_warnings": [],
+    "subtitle_fidelity_policy": "allow_simplified_rendering",
+    "claims": {
+      "video": {
+        "hdr10": true,
+        "hdr10_plus": false,
+        "hlg": false,
+        "dolby_vision": false
+      },
+      "audio": {
+        "codec": "eac3",
+        "passthrough": true,
+        "atmos_preserved": false
+      },
+      "subtitles": {
+        "ass_styling_preserved": false,
+        "bitmap_overlay": false,
+        "bitmap_sidecar": false
+      }
+    }
+  },
+  "server_features": [
+    "playback_plan_v3",
+    "server_remote_stream_bitrate_policy_v1",
+    "server_local_stream_bitrate_policy_v1",
+    "neutral_playback_v3_contract_v1",
+    "embedded_subtitles_v1",
+    "layout_aware_passthrough",
+    "playback_route_diagnostics",
+    "device_quirks_v1",
+    "seek_reanchor_v1",
+    "output_change_v1",
+    "output_display_evidence_v1",
+    "direct_stream_resume_v1",
+    "header_authenticated_media_v1",
+    "authorized_media_origins_v1",
+    "software_video_decode_v1",
+    "plan_invalidated_v1",
+    "plan_source_duration_v1",
+    "subrip_sidecar_v1",
+    "marker_thumbnails_v1",
+    "native_hls_mpegts_v1",
+    "native_hls_separate_audio_v1",
+    "server_dv7_to_dv81_v1",
+    "hls_subtitle_renditions_v1"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "MediaContainer": {
+    "totalSize": 100,
+    "Metadata": [
+      {
+        "ratingKey": "provider-movie-key",
+        "guid": "plex://movie/global-movie-a",
+        "type": "movie",
+        "title": "Watchlist Fixture Movie",
+        "year": 2020,
+        "summary": "A synthetic Watchlist title.",
+        "Guid": [{"id": "tmdb://123"}, {"id": "imdb://tt1234567"}, {"id": "https://example.test/?token=unsafe-secret"}],
+        "Media": [{"Part": [{"key": "https://example.test/video?token=unsafe-secret"}]}]
+      },
+      {
+        "ratingKey": "global-show-b",
+        "guid": "plex://show/global-show-b",
+        "type": "show",
+        "title": "Watchlist Fixture Show",
+        "Guid": [{"id": "tvdb://234"}]
+      },
+      {"ratingKey": "episode-not-supported", "type": "episode", "title": "Skip Episode"},
+      {"ratingKey": "provider-movie-key", "guid": "plex://movie/global-movie-a", "type": "movie", "title": "Duplicate Movie"}
+    ]
+  }
+}

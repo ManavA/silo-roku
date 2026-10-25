@@ -1,0 +1,12 @@
+{
+  "file_id": "f1",
+  "intro": {"start_seconds": 12, "end_seconds": 20, "source": "provider"},
+  "credits": {"start_seconds": 100, "end_seconds": 110, "source": "provider"},
+  "recap": {},
+  "preview": {},
+  "marker_segments": [
+    {"kind": "intro", "start_seconds": 12, "end_seconds": 20},
+    {"kind": "intro", "start_seconds": 35, "end_seconds": 45},
+    {"kind": "credits", "start_seconds": 100, "end_seconds": 110}
+  ]
+}

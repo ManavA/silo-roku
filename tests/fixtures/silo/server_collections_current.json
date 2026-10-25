@@ -1,0 +1,11 @@
+{
+  "libraries": [
+    {"library_id": 12, "library_name": "Movies", "total_count": 2,
+      "collections": [
+        {"id": "admin-1", "title": "Award winners", "item_count": 8},
+        {"id": "admin-2", "title": "Family night", "item_count": 4}
+      ]},
+    {"library_id": 21, "library_name": "Shows", "total_count": 1,
+      "collections": [{"id": "admin-3", "title": "Short seasons", "item_count": 5}]}
+  ]
+}

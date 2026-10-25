@@ -1,0 +1,23 @@
+{
+  "content_id": "c1",
+  "type": "movie",
+  "title": "Marker Test Movie",
+  "genres": [],
+  "keywords": [],
+  "status": "available",
+  "subtitles": [],
+  "cast": [{"person_id": "person-1", "name": "Test Actor", "character": "Hero", "order": 0,
+            "photo_url": "https://images.example/actor.jpg", "tmdb_id": "700", "imdb_id": "nm0000001"}],
+  "crew": [{"person_id": "person-2", "name": "Test Director", "job": "Director"}],
+  "intro": {"start": 30, "end": 45},
+  "recap": {"start": 0, "end": 10},
+  "versions": [
+    {"file_id": "f1", "resolution": "1080p", "codec_video": "h264", "codec_audio": "aac",
+     "container": "mp4", "file_size": 1000, "duration": 120, "bitrate": 100, "hdr": false,
+     "added_at": "2026-01-01T00:00:00.000Z", "intro": {"start": 12, "end": 32},
+     "credits": {"start": 100, "end": 120}, "preview": {"start": 90, "end": 100}},
+    {"file_id": "f2", "resolution": "1080p", "codec_video": "h264", "codec_audio": "aac",
+     "container": "mp4", "file_size": 2000, "duration": 220, "bitrate": 100, "hdr": false,
+     "added_at": "2026-01-01T00:00:00.000Z", "credits": {"start": 200, "end": 220}}
+  ]
+}

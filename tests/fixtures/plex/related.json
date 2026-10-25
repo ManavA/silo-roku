@@ -1,0 +1,13 @@
+{
+  "MediaContainer": {
+    "Hub": [
+      {"type": "movie", "title": "Similar", "Metadata": [
+        {"ratingKey": "201", "type": "movie", "title": "Related Movie"},
+        {"type": "movie", "title": "Missing Native Identity"}
+      ]},
+      {"type": "artist", "title": "Music", "Metadata": [{"ratingKey": "203", "type": "artist", "title": "Fixture Artist"}]},
+      {"type": "clip", "title": "Clips", "Metadata": [{"ratingKey": "204", "type": "clip", "title": "Unrelated Clip"}]},
+      {"type": "show", "title": "Other Shows", "Metadata": [{"ratingKey": "202", "type": "show", "title": "Related Show"}]}
+    ]
+  }
+}

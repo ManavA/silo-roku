@@ -1,0 +1,13 @@
+{
+  "items": [{
+    "content_id": "synthetic-episode",
+    "title": "Synthetic Episode",
+    "season_number": 1,
+    "episode_number": 1,
+    "runtime": 20,
+    "tmdb_id": "202",
+    "imdb_id": "tt0000202",
+    "tvdb_id": "302",
+    "files": []
+  }]
+}

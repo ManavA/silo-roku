@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="EpisodeNeighborTask" extends="Task">
+  <interface>
+    <field id="job" type="assocarray" />
+    <field id="result" type="assocarray" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/source/core/RuntimeIdentity.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/ServerUrlPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/MediaScope.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/EpisodeNeighbors.brs" />
+  <script type="text/brightscript" uri="pkg:/source/auth/SessionPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/auth/SessionStore.brs" />
+  <script type="text/brightscript" uri="pkg:/source/network/Http.brs" />
+  <script type="text/brightscript" uri="pkg:/source/adapters/PlexAdapter.brs" />
+  <script type="text/brightscript" uri="pkg:/source/adapters/SiloAdapter.brs" />
+  <script type="text/brightscript" uri="pkg:/components/EpisodeNeighborTask.brs" />
+</component>

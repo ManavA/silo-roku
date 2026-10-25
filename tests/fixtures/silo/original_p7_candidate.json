@@ -1,0 +1,110 @@
+{
+  "freshFile": {
+    "fresh": true,
+    "sourceId": "silo:fixture",
+    "itemId": "movie-fixture",
+    "scope": {
+      "provider": "silo",
+      "sourceId": "silo:fixture",
+      "profileId": "fixture-profile",
+      "generation": 4
+    },
+    "wire": {
+      "file_id": "731",
+      "container": "mkv",
+      "codec_video": "hevc",
+      "codec_audio": "truehd",
+      "hdr": true,
+      "duration": 7200,
+      "bitrate": 54000,
+      "effective_audio_track_index": 0,
+      "audio_tracks": [
+        {
+          "codec": "truehd",
+          "language": "en",
+          "channels": 8,
+          "layout": "7.1",
+          "default": true
+        },
+        {
+          "codec": "ac3",
+          "language": "en",
+          "channels": 6,
+          "layout": "5.1(side)",
+          "default": false
+        }
+      ],
+      "video_tracks": [
+        {
+          "codec": "hevc",
+          "profile": "Main 10",
+          "level": 153,
+          "width": 3840,
+          "height": 2160,
+          "bit_depth": 10,
+          "frame_rate": "24000/1001",
+          "interlaced": false,
+          "color_transfer": "smpte2084",
+          "color_primaries": "bt2020",
+          "color_space": "bt2020nc",
+          "color_range": "tv",
+          "dv_profile": 7,
+          "dv_level": 6,
+          "dv_bl_compat_id": 6,
+          "dv_config_present": true,
+          "dv_bl_compat_id_present": true,
+          "dv_bl_present": true,
+          "dv_rpu_present": true,
+          "dv_el_present": true,
+          "dv_enhancement_layer": "unknown",
+          "hdr10_plus": false
+        }
+      ]
+    }
+  },
+  "deviceSnapshot": {
+    "fresh": true,
+    "model": "C000X",
+    "modelType": "TV",
+    "modelNumber": "C208X",
+    "os": {
+      "major": "15",
+      "minor": "3",
+      "revision": "4",
+      "build": "2402"
+    },
+    "videoMode": "2160p60",
+    "hdr10": true,
+    "outputFingerprint": "fixture-output-4",
+    "videoQuery": {
+      "codec": "hevc",
+      "container": "mkv",
+      "profile": "main 10",
+      "level": "5.1",
+      "result": true
+    },
+    "audioQueries": [
+      {
+        "codec": "ac3",
+        "container": "mkv",
+        "chcnt": 6,
+        "result": true
+      }
+    ]
+  },
+  "requestIntent": {
+    "sourceId": "silo:fixture",
+    "itemId": "movie-fixture",
+    "fileId": "731",
+    "scope": {
+      "provider": "silo",
+      "sourceId": "silo:fixture",
+      "profileId": "fixture-profile",
+      "generation": 4
+    },
+    "qualityPreference": "original",
+    "subtitleMode": "off",
+    "bandwidthCapKbps": 0,
+    "playbackAttemptId": "attempt-fixture-01"
+  }
+}

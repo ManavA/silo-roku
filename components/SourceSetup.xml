@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="SourceSetup" extends="Group">
+  <interface>
+    <field id="focusedSource" type="string" />
+    <field id="sourceSelected" type="string" alwaysNotify="true" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/components/SourceSetup.brs" />
+  <children>
+    <Rectangle width="1092" height="352" color="0x2B3C4BFF" />
+    <Rectangle translation="[1,1]" width="1090" height="350" color="0x111923FF" />
+    <Rectangle translation="[511,1]" width="580" height="350" color="0x142431FF" />
+    <Rectangle width="4" height="352" color="0x7CD4FFFF" />
+    <Rectangle translation="[510,1]" width="1" height="350" color="0x2B3C4BFF" />
+
+    <Label translation="[28,24]" width="448" height="28" text="WELCOME TO SILO"
+           font="font:SmallBoldSystemFont" color="0x7CD4FFFF" />
+    <Label translation="[28,62]" width="448" height="44" text="Start with your library"
+           font="font:MediumBoldSystemFont" color="0xFFFFFFFF" />
+    <Label translation="[28,108]" width="448" height="28" text="Choose a service to continue."
+           font="font:SmallSystemFont" color="0xB9C8D5FF" />
+    <Rectangle translation="[28,146]" width="430" height="70" color="0x1D2A38FF" />
+    <Rectangle translation="[28,230]" width="430" height="70" color="0x1D2A38FF" />
+    <ButtonGroup id="sourceButtons" translation="[28,146]"
+                 minWidth="430" maxWidth="430" buttonHeight="70" itemSpacings="[14]"
+                 textFont="font:MediumBoldSystemFont" focusedTextFont="font:MediumBoldSystemFont"
+                 textColor="0xFFFFFFFF" focusedTextColor="0x090A0DFF"
+                 focusBitmapUri="pkg:/images/button_focus.9.png" />
+    <Label translation="[28,316]" width="448" height="26" text="Up / Down to choose     OK to connect"
+           font="font:SmallSystemFont" color="0x93A9BAFF" />
+
+    <Rectangle translation="[546,30]" width="64" height="64" color="0x7CD4FFFF" />
+    <Label id="sourceMark" translation="[546,30]" width="64" height="64" text="P"
+           font="font:LargeBoldSystemFont" color="0x090A0DFF" horizAlign="center" vertAlign="center" />
+    <Label id="sourceName" translation="[628,30]" width="428" height="44" text="Plex"
+           font="font:MediumBoldSystemFont" color="0xFFFFFFFF" />
+    <Label id="sourceKind" translation="[628,74]" width="428" height="28" text="PERSONAL MEDIA SERVER"
+           font="font:SmallSystemFont" color="0xA3BACBFF" />
+    <Rectangle translation="[546,118]" width="510" height="1" color="0x2D4658FF" />
+    <Label id="sourceHeadline" translation="[546,140]" width="510" height="70"
+           font="font:MediumBoldSystemFont" color="0xFFFFFFFF" wrap="true" maxLines="2" />
+    <Label id="sourceDescription" translation="[546,218]" width="510" height="66"
+           font="font:SmallSystemFont" color="0xB9C8D5FF" wrap="true" maxLines="3" />
+    <Label id="sourceStep" translation="[546,306]" width="510" height="30"
+           font="font:SmallBoldSystemFont" color="0x7CD4FFFF" />
+  </children>
+</component>

@@ -1,0 +1,20 @@
+dist/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+*.pkg
+*.p12
+*.pem
+*.key
+*.token
+*.log
+.DS_Store
+tools/brightscript/node_modules/
+.firecrawl/
+artifacts/screenshots/
+artifacts/roku-store/
+
+# Private Roku signing backup; never include in source or tester bundles.
+.roku-signing/

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="CastCard" extends="Group">
+ <interface>
+  <field id="itemContent" type="node" onChange="onContent" />
+  <field id="focusPercent" type="float" onChange="onFocus" />
+  <field id="rowFocusPercent" type="float" onChange="onFocus" />
+  <field id="itemHasFocus" type="boolean" onChange="onFocus" />
+  <field id="rowHasFocus" type="boolean" onChange="onFocus" />
+ </interface>
+ <script type="text/brightscript" uri="pkg:/components/CastCard.brs" />
+ <children>
+  <Rectangle id="border" translation="[22,0]" width="100" height="128" color="0x7CCBFFFF" visible="false" />
+  <Rectangle translation="[24,2]" width="96" height="124" color="0x202838FF" />
+  <Label id="initial" translation="[24,2]" width="96" height="124" horizAlign="center" vertAlign="center" color="0xC9D1E0FF" />
+  <Poster id="photo" translation="[24,2]" width="96" height="124" loadWidth="96" loadHeight="124" loadDisplayMode="scaleToFit" />
+  <Label id="name" translation="[0,132]" width="144" height="28" maxLines="1" color="0xFFFFFFFF" />
+  <Label id="role" translation="[0,164]" width="144" height="44" maxLines="2" wrap="true" color="0xD0D8E8FF" />
+ </children>
+</component>

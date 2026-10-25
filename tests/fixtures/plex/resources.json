@@ -1,0 +1,10 @@
+[
+  {"name":"Fixture Server","clientIdentifier":"server-a","provides":"server","owned":true,"accessToken":"fixture-resource-token","connections":[
+    {"uri":"https://server.example.test","local":false,"relay":false},
+    {"uri":"https://relay.example.test","local":false,"relay":true},
+    {"uri":"https://bad.example.test?X-Plex-Token=redacted","local":false},
+    {"uri":"https://name:secret@bad.example.test","local":false}
+  ]},
+  {"name":"Fixture Player","clientIdentifier":"player-a","provides":"player","connections":[{"uri":"https://player.example.test"}]},
+  {"name":"Broken Server","provides":"server","connections":[]}
+]

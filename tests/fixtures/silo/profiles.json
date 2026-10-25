@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "has_pin": false,
+      "id": "p1",
+      "is_child": false,
+      "is_primary": true,
+      "name": "Test Viewer"
+    }
+  ]
+}

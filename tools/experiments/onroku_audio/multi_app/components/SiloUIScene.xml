@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="SiloUIScene" extends="Scene">
+<interface>
+<field id="stockContext" type="assocarray" />
+</interface>
+<script type="text/brightscript" uri="pkg:/components/SiloUIScene.brs" />
+<script type="text/brightscript" uri="pkg:/source/RenderedClock.brs" />
+<script type="text/brightscript" uri="pkg:/source/SeekPolicy.brs" />
+<script type="text/brightscript" uri="pkg:/source/SeekScene.brs" />
+<script type="text/brightscript" uri="pkg:/source/RemoteIngest.brs" />
+<script type="text/brightscript" uri="pkg:/source/SiloNativeBearerTransport.brs" />
+<script type="text/brightscript" uri="pkg:/source/StockDescriptor.brs" />
+<children>
+<Video id="video" width="1280" height="720" />
+<Rectangle width="1280" height="100" color="0x111111dd" />
+<Label id="status" translation="[30,15]" width="1220" height="90" font="font:SmallSystemFont" text="Preparing bounded private transport probe" />
+</children>
+</component>

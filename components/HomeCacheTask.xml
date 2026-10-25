@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="HomeCacheTask" extends="Task">
+  <interface>
+    <field id="job" type="assocarray" />
+    <field id="result" type="assocarray" />
+    <field id="cancelled" type="boolean" value="false" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/source/auth/SessionStore.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/HomeCachePolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/HomeCacheTask.brs" />
+</component>

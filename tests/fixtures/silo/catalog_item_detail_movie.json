@@ -1,0 +1,69 @@
+{
+  "content_id": "c1",
+  "type": "movie",
+  "title": "Test Movie",
+  "genres": [
+    "Action",
+    "Sci-Fi"
+  ],
+  "keywords": [
+    "space",
+    "robots"
+  ],
+  "status": "available",
+  "cast": [
+    {
+      "character": "Hero",
+      "name": "Test Viewer",
+      "order": 0
+    }
+  ],
+  "crew": [
+    {
+      "job": "Director",
+      "name": "Test Viewer"
+    }
+  ],
+  "intro": {
+    "start": 30.0,
+    "end": 90.0
+  },
+  "versions": [
+    {
+      "file_id": "f1",
+      "resolution": "2160p",
+      "codec_video": "hevc",
+      "codec_audio": "eac3",
+      "container": "mkv",
+      "file_size": 42949672960,
+      "duration": 7080,
+      "bitrate": 45000,
+      "hdr": true,
+      "added_at": "2026-01-01T00:00:00.000Z",
+      "video_tracks": [
+        {
+          "dv_bl_compat_id_present": true,
+          "dv_config_present": true,
+          "interlaced": false,
+          "dv_profile": 8,
+          "width": 3840,
+          "height": 2160
+        }
+      ],
+      "audio_tracks": [
+        {
+          "default": true,
+          "codec": "eac3",
+          "language": "eng",
+          "channels": 6
+        },
+        {
+          "default": false,
+          "codec": "aac",
+          "language": "fra",
+          "channels": 2
+        }
+      ]
+    }
+  ]
+}

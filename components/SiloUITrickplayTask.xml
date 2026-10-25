@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="SiloUITrickplayTask" extends="Task">
+  <interface>
+    <field id="job" type="assocarray" />
+    <field id="targetMs" type="float" />
+    <field id="cancelled" type="boolean" value="false" />
+    <field id="result" type="assocarray" alwaysNotify="true" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/source/core/ServerUrlPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/auth/SessionPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/auth/SessionStore.brs" />
+  <script type="text/brightscript" uri="pkg:/source/adapters/SiloAdapter.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/ArtworkPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUITrickplayPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/network/Http.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUITrickplayTask.brs" />
+</component>

@@ -1,0 +1,7 @@
+{
+  "collections": [
+    {"id": "personal-1", "name": "Weekend films", "profile_id": "profile-1", "item_count": 3},
+    {"id": "personal-2", "name": "Family favorites", "profile_id": "profile-1", "item_count": 2}
+  ],
+  "groups": []
+}

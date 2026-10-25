@@ -1,0 +1,14 @@
+{
+  "MediaContainer": {
+    "Metadata": [
+      {
+        "ratingKey": "501", "type": "clip", "subtype": "trailer", "title": "Fixture Trailer", "duration": 90000,
+        "Media": [{
+          "id": "2501", "videoCodec": "h264", "audioCodec": "aac", "audioChannels": 2,
+          "width": 1920, "height": 1080, "container": "mp4",
+          "Part": [{"id": "3501", "key": "/library/parts/3501/file.mp4", "container": "mp4", "duration": 90000}]
+        }]
+      }
+    ]
+  }
+}

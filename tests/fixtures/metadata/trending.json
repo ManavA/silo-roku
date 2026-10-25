@@ -1,0 +1,10 @@
+{
+  "page": 1,
+  "total_pages": 5,
+  "total_results": 100,
+  "results": [
+    {"id": 101, "media_type": "movie", "title": "Synthetic Moon", "release_date": "2026-10-12", "poster_path": "/synthetic-moon.jpg", "backdrop_path": "/synthetic-moon-wide.jpg", "overview": "A synthetic trending fixture.", "unknown_token": "must-be-omitted"},
+    {"id": 202, "media_type": "tv", "name": "Synthetic Stars", "first_air_date": "2025-01-01", "poster_path": null},
+    {"id": 303, "media_type": "person", "name": "Unknown media kind"}
+  ]
+}

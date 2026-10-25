@@ -1,0 +1,66 @@
+{
+  "fileId": "f1",
+  "installationId": "server-install",
+  "playbackAttemptId": "attempt-1",
+  "startPositionMs": 12500,
+  "clientCapabilities": {
+    "video_evidence": "declared",
+    "audio_evidence": "declared",
+    "codecs_video": [
+      "h264"
+    ],
+    "codecs_video_hardware": [
+      "h264"
+    ],
+    "codecs_audio": [
+      "aac"
+    ],
+    "containers": [
+      "mp4",
+      "hls"
+    ],
+    "hdr": false
+  },
+  "clientPlaybackContext": {
+    "protocol_version": 3,
+    "form_factor": "tv",
+    "app_version": "0.1.0",
+    "device": {
+      "platform": "roku",
+      "model": "test-model"
+    },
+    "output": {
+      "display": {
+        "hdr_evidence": "unknown"
+      }
+    },
+    "deliveries": {
+      "hls": {
+        "enabled": true,
+        "supported_on_device": true,
+        "containers": [
+          "hls"
+        ],
+        "video_codecs": [
+          "h264"
+        ],
+        "audio_decode_codecs": [
+          "aac"
+        ],
+        "audio_passthrough_codecs": [],
+        "subtitles": {
+          "embedded_text": false,
+          "sidecar_text": true,
+          "ass_styling": false,
+          "embedded_bitmap": false,
+          "sidecar_bitmap": false,
+          "font_attachments": false
+        },
+        "features": [],
+        "auth_header_refresh": false,
+        "validated_claims": [],
+        "transformations": []
+      }
+    }
+  }
+}

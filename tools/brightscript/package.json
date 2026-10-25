@@ -1,0 +1,8 @@
+{
+  "name": "silo-roku-runtime-tests",
+  "private": true,
+  "description": "Development interpreter for pure BrightScript policy and fixture tests",
+  "devDependencies": {
+    "@rokucommunity/brs": "0.47.6"
+  }
+}

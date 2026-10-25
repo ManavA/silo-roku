@@ -1,0 +1,14 @@
+{
+  "MediaContainer": {
+    "size": 1,
+    "videoDecision": "copy",
+    "audioDecision": "copy",
+    "container": "mp4",
+    "videoCodec": "hevc",
+    "audioCodec": "eac3",
+    "audioChannels": 6,
+    "width": 3840,
+    "height": 2160,
+    "bitrate": 28000
+  }
+}
