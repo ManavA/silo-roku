@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="LanIdentityTask" extends="Task">
+  <interface>
+    <field id="job" type="assocarray" />
+    <field id="cancelled" type="boolean" value="false" />
+    <field id="result" type="assocarray" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/source/core/LanDiscoveryPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/LanIdentityPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/LanIdentityHttp.brs" />
+  <script type="text/brightscript" uri="pkg:/components/LanIdentityTask.brs" />
+</component>

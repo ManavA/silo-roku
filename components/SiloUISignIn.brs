@@ -21,6 +21,7 @@ function SiloUISignInChoices() as Object
         choices.Push({label:address,action:"saved_silo",address:address})
     end for
     choices.Push({label:"Enter another server address",action:"silo_address"})
+    choices.Push({label:"Find servers on this network",action:"silo_find"})
     choices.Push({label:"Forget saved addresses",action:"forget_servers"})
     choices.Push({label:"Back",action:"sources"})
     return choices

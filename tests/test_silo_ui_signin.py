@@ -80,12 +80,14 @@ end sub
 ''')
             output=run_brightscript([POLICY,p,stub],'''
                 m.obQr={}:m.obMode="silo"
-                OnboardingResult("ob_device_start",{ok:true},{verificationUri:"https://silo.example/activate",verificationUriComplete:"https://silo.example/activate?code=ABCD1234",userCode:"ABCD-1234",intervalMs:3000},invalid)
+                OnboardingResult("ob_device_start",{ok:true},{verificationUri:"https://silo.example/activate",verificationUriComplete:"https://silo.example/activate?code=ABCD1234",userCode:"ABCD-1234",matchCode:"LEGACY-9876",intervalMs:3000},invalid)
                 print FormatJson({qr:m.qr,body:m.body,code:m.code,scheduled:m.scheduled})
             ''',root=Path(d))
         result=json.loads(output)
         self.assertEqual(result['qr'],'https://silo.example/activate?code=ABCD1234')
         self.assertEqual(result['code'],'ABCD-1234')
+        self.assertNotIn('Match code',result['body'])
+        self.assertNotIn('LEGACY-9876',result['body'])
         self.assertTrue(result['scheduled'])
         self.assertIn('app',result['body'].lower())
         self.assertIn('https://silo.example/activate',result['body'])
@@ -162,7 +164,7 @@ end sub
             ''',root=Path(d))
         self.assertEqual(json.loads(output),{'requestedBefore':False,'sent':{'action':'set_server','params':{'baseUrl':'https://one.example'},'purpose':'ob_server','provider':'silo'},'mode':'silo'})
 
-    def test_first_silo_signin_requests_own_server_without_network(self):
+    def test_first_silo_signin_offers_manual_or_discovery_without_network(self):
         from tools.brightscript import run_brightscript
         import re
         with tempfile.TemporaryDirectory() as d:
@@ -182,7 +184,7 @@ end sub
                 started={sent:m.sent,mode:m.obMode,keyboardOpened:m.keyboardOpened,actions:actions}
                 print FormatJson(started)
             ''',root=Path(d))
-        self.assertEqual(json.loads(output),{'sent':None,'mode':'','keyboardOpened':True,'actions':['silo_address','sources']})
+        self.assertEqual(json.loads(output),{'sent':None,'mode':'','keyboardOpened':False,'actions':['silo_address','silo_find','sources']})
 
     def test_retry_keeps_manually_entered_server_before_it_is_saved(self):
         from tools.brightscript import run_brightscript

@@ -51,6 +51,9 @@
   <script type="text/brightscript" uri="pkg:/source/core/SiloUISignInPolicy.brs" />
   <script type="text/brightscript" uri="pkg:/components/SiloUISignIn.brs" />
   <script type="text/brightscript" uri="pkg:/components/SiloUIOnboarding.brs" />
+  <script type="text/brightscript" uri="pkg:/components/SiloUILan.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/LanDiscoveryPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/LanIdentityPolicy.brs" />
   <script type="text/brightscript" uri="pkg:/components/SiloUIDialogs.brs" />
   <script type="text/brightscript" uri="pkg:/source/core/SearchPolicy.brs" />
   <script type="text/brightscript" uri="pkg:/components/SiloUILibrary.brs" />

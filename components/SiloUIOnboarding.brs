@@ -24,6 +24,7 @@ sub OnboardingInit()
 end sub
 
 sub ObScreen(eyebrow as String, title as String, body as String, code as String, choices as Object)
+    if m.lanRendering <> true then SiloUILanRetire()
     if m.obQr <> invalid then SiloUISignInClearQr()
     if m.view <> "onboarding"
         ' Keep the opening Select on the manual peer. Native focus is handed
@@ -101,7 +102,6 @@ sub OnboardingResult(purpose as String, result as Object, data as Object, extra 
         approvalUri = SiloUISignInApprovalUri(TextOr(data.verificationUri),TextOr(data.userCode),TextOr(data.verificationUriComplete))
         body = "On your phone, open " + TextOr(data.verificationUri) + ", enter the code and approve."
         if approvalUri <> TextOr(data.verificationUri) then body = "Scan the QR, tap Open in the Silo app, then approve. Or visit " + TextOr(data.verificationUri) + " and enter the code below."
-        if TextOr(data.matchCode) <> "" then body = body + " Match code: " + data.matchCode + "."
         m.obPollMs = NumberOr(data.intervalMs, 5000)
         if m.obPollMs < 2000 then m.obPollMs = 2000
         ObScreen("Sign in to Silo", "Connect your Silo account", body, TextOr(data.userCode), [{label: "Get a new code", action: "silo_code"}, {label: "Change server", action: "silo_servers"}, {label: "Back", action: "sources"}])
@@ -238,14 +238,13 @@ end sub
 sub ObShowSiloServers()
     m.obMode = ""
     m.pollTimer.control = "stop"
-    ObScreen("Sign in to Silo", "Connect your server", "Enter the address of your Silo server, including http:// or https://.", "", [{label: "Enter server address", action: "silo_address"}, {label: "Back", action: "sources"}])
+    ObScreen("Sign in to Silo", "Connect your server", "Enter the address of your Silo server, including http:// or https://.", "", [{label: "Enter server address", action: "silo_address"}, {label: "Find servers on this network", action: "silo_find"}, {label: "Back", action: "sources"}])
     if type(m.savedServers) = "roArray"
         if m.savedServers.Count() > 0
             ObScreen("Sign in to Silo", "Choose your server", "Saved addresses on this Roku. Each server uses its own sign-in.", "", SiloUISignInChoices())
             return
         end if
     end if
-    ObServerAddressDialog()
 end sub
 
 sub ObServerAddressDialog()
@@ -335,7 +334,17 @@ sub ObChoose(choice as Object)
         section.Delete("silo")
         section.Flush()
         ObShowSiloServers()
+    else if action = "silo_lan_select"
+        SiloUILanSelect(choice)
+    else if action = "silo_lan_confirm"
+        SiloUILanConfirm(choice)
+    else if action = "silo_lan_results"
+        if m.lanPhase = "confirm" then SiloUILanCandidates()
+    else if action = "silo_find"
+        SiloUILanFind()
     else if action = "silo_address"
+        if m.lanPhase <> invalid and m.lanPhase <> "" then ObShowSiloServers()
+        SiloUILanRetire()
         ObServerAddressDialog()
     else if action = "silo_code"
         if TextOr(m.obServerUrl) = "" then ObStartSilo() else ObConnectSilo(m.obServerUrl)
@@ -487,6 +496,14 @@ end sub
 function OnboardingKey(key as String) as Boolean
     if m.obBusy = true then return true
     if key = "back"
+        if m.lanPhase <> invalid and m.lanPhase <> ""
+            if m.lanPhase = "confirm"
+                SiloUILanCandidates()
+            else
+                ObShowSiloServers()
+            end if
+            return true
+        end if
         if m.unresolvedAllocation <> invalid and m.transitionIntent <> invalid then m.transitionIntent = invalid
         if m.obPage = "expired" then return true
         if m.obPage = "preference" or m.obSwitching = true

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="LanDiscoveryTask" extends="Task">
+  <interface>
+    <field id="job" type="assocarray" />
+    <field id="cancelled" type="boolean" value="false" />
+    <field id="result" type="assocarray" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/source/core/LanDiscoveryPolicy.brs" />
+  <script type="text/brightscript" uri="pkg:/components/LanDiscoveryTask.brs" />
+</component>

@@ -257,6 +257,7 @@ end sub
 ' Views
 
 sub ShowView(view as String)
+    if m.view = "onboarding" and view <> "onboarding" then SiloUILanRetire()
     if m.publicArtwork <> invalid then SiloUIArtworkRetire()
     if m.view = "home" and view <> "home" then HomeCacheYield()
     if view <> "player" and m.playerStatusPanel <> invalid then m.playerStatusPanel.visible = false
