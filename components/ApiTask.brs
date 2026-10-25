@@ -4317,6 +4317,7 @@ end function
 ' Current V3 terminals assert no client lease; legacy lease-bearing terminals
 ' require a real stop ACK instead. Unknown additive features remain harmless.
 function TaskSiloStartTerminal(decision as Object, allowLease = false as Boolean) as Boolean
+    if type(decision.outcome) <> "String" and type(decision.outcome) <> "roString" then return false
     if not SpNumber(SpField(decision,"protocol_version"),3,true) or decision.protocol_version <> 3 then return false
     if decision.outcome <> "adaptation_unavailable"
         if not allowLease or decision.outcome <> "terminal" then return false

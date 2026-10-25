@@ -5,7 +5,7 @@ from pathlib import Path
 from tools.brightscript import run_brightscript as execute_brightscript
 ROOT=Path(__file__).resolve().parents[1]
 def run_brightscript(files, body, *, root):
-    return execute_brightscript([ROOT/'source/core/SiloPlaybackPolicy.brs', ROOT/'components/SiloUISubtitleArtifact.brs', *files], body, root=root)
+    return execute_brightscript([ROOT/'source/adapters/SiloAdapter.brs', ROOT/'source/core/SiloPlaybackPolicy.brs', ROOT/'components/SiloUISubtitleArtifact.brs', *files], body, root=root)
 class SiloUIRobustnessTests(unittest.TestCase):
     def component(self, body, helpers=''):
         with tempfile.TemporaryDirectory() as root:
@@ -275,7 +275,6 @@ end function
         with tempfile.TemporaryDirectory() as root:
             source=(ROOT/'source/core/SiloUIFormat.brs').read_text()+'\n'+'\n'.join((ROOT/'components'/name).read_text() for name in ['SiloUIScene.brs','SiloUIPlayer.brs','SiloUIRobustness.brs'])
             source+='\n'+(ROOT/'source/core/SiloUIPlayerPolicy.brs').read_text()
-            source+='\n'+re.search(r'(?ms)^function SiloObject\(.*?^end function', (ROOT/'source/adapters/SiloAdapter.brs').read_text()).group(0)
             source=source.replace('CreateObject("roSGNode", "Dialog")','FixtureDialog()')
             for name,replacement in [
                 ('ApiOwned','''sub ApiOwned(action as String,params as Object,purpose as String,extra as Dynamic,owner as Object)

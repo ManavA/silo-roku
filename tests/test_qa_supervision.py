@@ -485,7 +485,7 @@ class SupervisionTests(unittest.TestCase):
         manifest = self.prepared(lease=5)
         commands = []
         def fake_start(command, **kwargs):
-            self.assertLessEqual(kwargs["timeout"], 2.2)
+            self.assertLessEqual(kwargs["timeout"], manifest.deadline_mono - (manifest.deadline_mono - 2.2))
             commands.append(command)
             return subprocess.CompletedProcess(command, 0)
         with patch("qa_supervision.subprocess.run", side_effect=fake_start), \

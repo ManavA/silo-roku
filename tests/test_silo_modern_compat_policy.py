@@ -6,7 +6,7 @@ from tests.test_silo_playback_task import FILES as NATIVE_FILES
 from tests import test_silo_p8_original_transport as native
 ROOT=Path(__file__).resolve().parents[1]
 KIND='experimental_query_p8_ts_v1'
-FILES=[*NATIVE_FILES,ROOT/'source/core/SiloNativeBearerTransport.brs',ROOT/'source/core/SiloCompatPlaybackPolicy.brs',ROOT/'source/core/SiloCompatCapability.brs']
+FILES=[*NATIVE_FILES,ROOT/'source/core/SiloNativeBearerTransport.brs']
 def literal(x):return 'ParseJson("'+json.dumps(x).replace('"','""')+'","i")'
 SDK='''
 function Fact(name as String) as Dynamic

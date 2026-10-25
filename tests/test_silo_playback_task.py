@@ -896,7 +896,7 @@ class SiloPlaybackTaskTests(unittest.TestCase):
         result = self.run_start(change_revision=True, cleanup_status=503)
         self.assertEqual({"ok": False, "errorCode": "session_changed", "plan": {
             "sessionId": "sess-1", "installationId": "server-install",
-            "stopId": "10000000-0000-4000-8000-000000000001", "persistProgress": False}}, result["outcome"])
+            "stopId": "10000000-0000-4000-8000-000000000001", "persistProgress": False}}, self.assert_safe_start_response_facts(result))
 
     def test_terminal_decision_with_allocated_session_is_abandoned(self):
         decision = json.loads((FIXTURES / "playback_decision_terminal.json").read_text())
@@ -976,10 +976,30 @@ class SiloPlaybackTaskTests(unittest.TestCase):
         # Validate the optional presentation-only addition before comparing the
         # original exact error/cleanup outcome. Never allow arbitrary nested data.
         outcome = dict(result['outcome'])
+        if isinstance(outcome.get('plan'), dict):
+            outcome['plan'] = self.assert_safe_start_response_facts(
+                {'outcome': outcome['plan'], 'requests': result['requests']})
         attempts = outcome.pop('startAttempts', [])
+        self.assertIs(type(attempts), list)
         self.assertLessEqual(len(attempts), 8)
         for attempt in attempts:
-            self.assertEqual({'request', 'httpStatus', 'outcome', 'originalReason'}, set(attempt))
+            required = {'request', 'httpStatus', 'outcome', 'originalReason'}
+            self.assertLessEqual(required, set(attempt))
+            self.assertLessEqual(set(attempt), required | {'validationStage', 'validationReason'})
+            self.assertIs(type(attempt['httpStatus']), int)
+            self.assertGreaterEqual(attempt['httpStatus'], 100)
+            self.assertLessEqual(attempt['httpStatus'], 599)
+            self.assertIn(attempt['outcome'], {'plan','playable','terminal','adaptation_unavailable','other','missing','null','invalid'})
+            self.assertIn(attempt['originalReason'], {'not_checked','unavailable','eligible','qualified_route_not_enabled','native_copy_preferred','base_unproven','decoder_unproven','device_unqualified','enhancement_layer_unqualified','output_unqualified','source_unqualified','stale_evidence','video_dimensions','video_frame_rate','video_inventory','video_unqualified','attempt_identity','audio_ambiguous','audio_identity','audio_index_convention','audio_inventory','audio_language','audio_role_unknown','audio_unsupported','bandwidth_intent','bitrate_unknown','explicit_audio_required','explicit_audio_unsupported','file_identity','preferred_audio_unqualified','quality_intent','scope_identity','source_identity','subtitle_intent'})
+            if 'validationStage' in attempt or 'validationReason' in attempt:
+                reasons = {
+                    'audio_selection': {'audio_mismatch'},
+                    'media_auth': {'invalid_media_auth'},
+                    'plan_context': {'invalid_plan_context'},
+                    'original_receipt': {'receipt_audio','receipt_delivery','receipt_file','receipt_owner','receipt_proof','receipt_quality','receipt_recipe','receipt_session','receipt_source','receipt_subtitle','receipt_subtitle_invalid','receipt_subtitle_delivery','receipt_subtitle_codec','receipt_subtitle_clock','receipt_subtitle_selection','receipt_transformations'},
+                }
+                self.assertIn(attempt.get('validationStage'), reasons)
+                self.assertIn(attempt.get('validationReason'), reasons[attempt['validationStage']] | {'unavailable'})
             self.assert_safe_start_response_facts({'outcome': {'startRequestFacts': attempt['request']}, 'requests': []})
         request = outcome.pop('startRequestFacts', None)
         if request is not None:

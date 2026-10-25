@@ -201,6 +201,14 @@ class SiloNativeVersionsTests(unittest.TestCase):
         for key in ['client_features','client_capabilities','client_playback_context']:
             self.assertEqual(auto_body[key], manual_body[key], key)
         self.assertEqual(auto_body, manual_body)
-        self.assertEqual('auto', auto['outcome']['startRequestFacts'].pop('selection'))
-        self.assertEqual('manual', manual['outcome']['startRequestFacts'].pop('selection'))
+        checks = playback.SiloPlaybackTaskTests()
+        for result, selection in [(auto, 'auto'), (manual, 'manual')]:
+            checks.assert_safe_start_response_facts(result)
+            self.assertEqual(selection, result['outcome']['startRequestFacts']['selection'])
+            for attempt in result['outcome']['startAttempts']:
+                self.assertEqual(selection, attempt['request']['selection'])
+        for result in (auto, manual):
+            result['outcome']['startRequestFacts'].pop('selection')
+            for attempt in result['outcome']['startAttempts']:
+                attempt['request'].pop('selection')
         self.assertEqual(auto['outcome'], manual['outcome'])
