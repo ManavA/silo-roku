@@ -68,7 +68,7 @@ class SiloUIArtworkRecoveryTests(unittest.TestCase):
             source=(ROOT/'components/PosterCard.brs').read_text()
             source=re.sub(r'sub layoutChips\(.*?\nend sub','sub layoutChips()\nend sub',source,count=1,flags=re.S)
             fixture=Path(directory)/'card.brs';fixture.write_text(source)
-            result=json.loads(run_brightscript([ROOT/'source/core/SiloUIFormat.brs',fixture],'''
+            result=json.loads(run_brightscript([ROOT/'source/core/SiloUIFormat.brs',ROOT/'source/core/SiloUIRatingPolicy.brs',fixture],'''
                 item={sourceId:"silo",seriesId:"series",type:"episode",title:"Episode"}
                 art=SiloUIEpisodePortraitArt(item,{poster:"/child",posterIsEpisodeStill:false,still:"/frame",backdrop:"/scene"},{silo:{series:"/parent"}})
                 c=SiloUIItemFields(item,art,false,"https://server.test")
@@ -99,7 +99,7 @@ function ItemArt(item)
     return item.art
 end function
 """)
-            result=json.loads(run_brightscript([ROOT/'source/core/SiloUIFormat.brs',fixture],'''
+            result=json.loads(run_brightscript([ROOT/'source/core/SiloUIFormat.brs',ROOT/'source/core/SiloUIRatingPolicy.brs',fixture],'''
                 m.provider="silo":m.profileId="first":m.baseUrl="https://server.test"
                 m.seriesPostersScope="first":m.seriesPosters={silo:{series:"/cover"}}
                 item={sourceId:"silo",itemId:"ep",seriesId:"series",type:"episode",title:"Episode",art:{poster:"/still",still:"/still"}}
@@ -113,7 +113,7 @@ end function
             source=(ROOT/'components/PosterCard.brs').read_text()
             source=re.sub(r'sub layoutChips\(.*?\nend sub','sub layoutChips()\nend sub',source,count=1,flags=re.S)
             fixture=Path(directory)/'card.brs';fixture.write_text(source)
-            output=run_brightscript([ROOT/'source/core/SiloUIFormat.brs',fixture],'''
+            output=run_brightscript([ROOT/'source/core/SiloUIFormat.brs',ROOT/'source/core/SiloUIRatingPolicy.brs',fixture],'''
                 c={title:"DV film",landscape:false,HDPosterUrl:"https://server.test/poster",artCandidates:["https://server.test/poster","https://server.test/backdrop"],observeField:sub(a,b)
                 end sub,unobserveField:sub(a)
                 end sub}
@@ -142,7 +142,7 @@ class SiloUIBackdropOwnershipTests(unittest.TestCase):
             source=(ROOT/'components/SiloUIScene.brs').read_text()
             source=source[source.index("function BackdropOwner()"):source.index("sub Api(")]
             fixture=Path(directory)/'backdrop.brs';fixture.write_text(source)
-            return json.loads(run_brightscript([ROOT/'source/core/SiloUIFormat.brs',fixture],'''
+            return json.loads(run_brightscript([ROOT/'source/core/SiloUIFormat.brs',ROOT/'source/core/SiloUIRatingPolicy.brs',fixture],'''
                 m.provider="silo":m.sourceId="source":m.profileId="profile":m.generation=1
                 m.view="home":m.heroItem={itemId:"first"}:m.detailItem={itemId:"second"}
                 m.backdrop={uri:"",opacity:0,loadStatus:"loading"}

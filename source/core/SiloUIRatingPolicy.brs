@@ -80,3 +80,27 @@ function SiloUIRatingText(value as Dynamic, limit as Integer) as String
     if type(value) <> "String" and type(value) <> "roString" then return ""
     return Left(value.Trim(),limit)
 end function
+
+function SiloUICardImdbLabel(item as Object) as String
+    selected = item
+    if item.DoesExist("ratings")
+        selected = {ratings:[]}
+        if type(item.ratings) = "roArray"
+            count = item.ratings.Count()
+            if count > 64 then count = 64
+            for index = 0 to count - 1
+                rating = item.ratings[index]
+                if type(rating) = "roAssociativeArray"
+                    if SiloUIRatingText(rating.source,32) = "imdb"
+                        chips = SiloUIRatingChips({ratings:[rating]})
+                        if chips.Count() > 0 then return chips[0].fallback
+                    end if
+                end if
+            end for
+        end if
+    end if
+    for each chip in SiloUIRatingChips(selected)
+        if chip.source = "imdb" then return chip.fallback
+    end for
+    return ""
+end function

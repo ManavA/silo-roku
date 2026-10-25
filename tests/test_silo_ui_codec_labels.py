@@ -38,13 +38,17 @@ class CodecLabels(unittest.TestCase):
    end function}
    init():m.top.height=0:onContent():earlyHidden=not m.codecBg.visible
    m.top.height=225:onLayout()
-   first={text:m.codec.text,width:m.codec.width,y:m.codec.translation[1],ratingY:m.chipRight.translation[1],progressY:m.progress.translation[1],visible:m.codecBg.visible}
+   first={text:m.codec.text,width:m.codec.width,y:m.codec.translation[1],rating:m.chipRight.text,ratingY:m.chipRight.translation[1],progressY:m.progress.translation[1],visible:m.codecBg.visible}
+   c.item={ratings:[{source:"imdb",score:75}],badges:{imdb:9}}:onContent():canonical=m.chipRight.text
+   c.item.ratings=[]:onContent():empty=m.chipRight.text
    c.badges={videoCodec:"unknown"}:onContent():cleared=m.codec.text="" and not m.codecBg.visible
    c.badges={videoCodec:"hevc"}:onContent():m.top.itemContent=invalid:onContent()
-   print FormatJson({earlyHidden:earlyHidden,first:first,cleared:cleared,invalidCleared:m.codec.text="" and not m.codecBg.visible})
+   print FormatJson({canonical:canonical,empty:empty,earlyHidden:earlyHidden,first:first,cleared:cleared,invalidCleared:m.codec.text="" and not m.codecBg.visible})
   '''
   with tempfile.TemporaryDirectory() as d:
-   r=json.loads(run_brightscript([FORMAT,ROOT/'components/PosterCard.brs'],body,root=Path(d)))
+   r=json.loads(run_brightscript([FORMAT,ROOT/'source/core/SiloUIRatingPolicy.brs',ROOT/'components/PosterCard.brs'],body,root=Path(d)))
+  self.assertEqual('IMDb 7.5',r['canonical']);self.assertEqual('',r['empty'])
+  self.assertEqual('IMDb 8.2',r['first']['rating'])
   self.assertTrue(r['earlyHidden'])
   self.assertEqual('H.264',r['first']['text']);self.assertTrue(r['first']['visible']);self.assertLessEqual(r['first']['width'],134)
   self.assertGreater(r['first']['y'],r['first']['ratingY']+22);self.assertLess(r['first']['y']+22,r['first']['progressY'])

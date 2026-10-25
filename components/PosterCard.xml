@@ -13,6 +13,7 @@
     <field id="gridHasFocus" type="boolean" onChange="onFocus" />
   </interface>
   <script type="text/brightscript" uri="pkg:/source/core/SiloUIFormat.brs" />
+  <script type="text/brightscript" uri="pkg:/source/core/SiloUIRatingPolicy.brs" />
   <script type="text/brightscript" uri="pkg:/components/PosterCard.brs" />
   <children>
     <Poster id="bg" uri="pkg:/images/ui/card_bg.9.png" />

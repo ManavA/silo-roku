@@ -9,6 +9,20 @@ class RatingChipsTests(unittest.TestCase):
     def call(self,item):
         with tempfile.TemporaryDirectory() as d:
             return run_function([ROOT/'source/core/SiloUIRatingPolicy.brs'],'SiloUIRatingChips',[item],root=Path(d))
+    def test_card_imdb_uses_canonical_scores_and_clear_authority(self):
+        cases = [({'ratings': [{'source':'imdb','score':82.5,'display':'8.25'}], 'badges':{'imdb':9}}, 'IMDb 8.25/10'),
+                 ({'ratings': [], 'badges':{'imdb':9}}, ''),
+                 ({'ratings': None, 'badges':{'imdb':9}}, ''),
+                 ({'ratings': [{'source':'imdb','score':'82'}], 'badges':{'imdb':9}}, ''),
+                 ({'ratings': [{'source':'other','score':80}]*6 + [{'source':'imdb','score':70}]}, 'IMDb 7/10'),
+                 ({'ratings': [{'source':'imdb','score':0}]}, 'IMDb 0/10'),
+                 ({'badges':{'imdb':8.2}}, 'IMDb 8.2/10')]
+        with tempfile.TemporaryDirectory() as d:
+            for item, expected in cases:
+                with self.subTest(item=item):
+                    self.assertEqual(run_function([ROOT/'source/core/SiloUIRatingPolicy.brs'],
+                        'SiloUICardImdbLabel', [item], root=Path(d)), expected)
+
     def test_canonical_order_scale_and_empty_authority(self):
         self.assertEqual(self.call({'ratings':[], 'badges':{'imdb':8.2}}),[])
         chips=self.call({'ratings':[{'source':'rt_audience','name':'Popcornmeter','score':92,'display':'92%'},{'source':'imdb','name':'IMDb','score':82,'display':'8.2'},{'source':'plugin','name':'Other','score':75,'display':'3/4'}]})

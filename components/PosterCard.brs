@@ -154,8 +154,11 @@ sub CardBindContent(retryExhausted as Boolean)
     badges = c.badges
     if type(badges) = "roAssociativeArray"
         if badges.resolution <> invalid then left = ResolutionLabel(badges.resolution)
-        if badges.imdb <> invalid then right = "IMDb " + Str(Int(badges.imdb * 10) / 10.0).Trim()
     end if
+    ratingItem = c.item
+    if type(ratingItem) <> "roAssociativeArray" then ratingItem = {badges:badges}
+    right = SiloUICardImdbLabel(ratingItem)
+    if right.Right(3) = "/10" then right = right.Left(Len(right)-3)
     m.codec.text = SourceVideoCodecs(badges)
     m.chipLeft.text = left
     m.chipRight.text = right

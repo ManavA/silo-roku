@@ -344,7 +344,7 @@ end function
         from tools.brightscript import run_brightscript
         import json,re
         with tempfile.TemporaryDirectory() as root:
-            source=(ROOT/'source/core/SiloUIFormat.brs').read_text()+'\n'+(ROOT/'components/PosterCard.brs').read_text()
+            source=(ROOT/'source/core/SiloUIFormat.brs').read_text()+'\n'+(ROOT/'components/PosterCard.brs').read_text()+'\n'+(ROOT/'source/core/SiloUIRatingPolicy.brs').read_text()
             source=re.sub(r'sub layoutChips\(.*?\nend sub','sub layoutChips()\nend sub',source,count=1,flags=re.S)
             fixture=Path(root)/'card.brs';fixture.write_text(source)
             output=run_brightscript([fixture],'''

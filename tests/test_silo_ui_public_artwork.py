@@ -80,7 +80,7 @@ end sub
             source=(ROOT/'components/PosterCard.brs').read_text()
             source=re.sub(r'sub layoutChips\(.*?\nend sub','sub layoutChips()\nend sub',source,count=1,flags=re.S)
             fixture=Path(directory)/'card.brs';fixture.write_text(source)
-            output=run_brightscript([ROOT/'source/core/SiloUIFormat.brs',fixture],'''
+            output=run_brightscript([ROOT/'source/core/SiloUIFormat.brs',ROOT/'source/core/SiloUIRatingPolicy.brs',fixture],'''
  c={title:"Film",landscape:false,artCandidates:["dead","source"],observeField:sub(a,b)
  end sub,unobserveField:sub(a)
  end sub}
