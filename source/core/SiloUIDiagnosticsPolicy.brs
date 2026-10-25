@@ -21,7 +21,7 @@ function SiloUIDiagnosticsText(stats as Object, source as Object) as String
     text += nl + "Native video: " + SiloUIDiagnosticsEnum(stats.videoFormat, ["none", "unknown", "hevc", "hevc_b", "mpeg1", "mpeg2", "mpeg4_2", "mpeg4_10b", "mpeg4_15", "AVC vc1", "wmv"])
     text += " " + SiloUIDiagnosticsSize(stats.videoSize)
     text += " / Native audio: " + SiloUIDiagnosticsEnum(stats.audioFormat, ["none", "unknown", "aac", "aac_adif", "aac_adts", "aac_latm", "ac3", "ac4", "alac", "eac3", "flac", "mp3", "opus", "vorbis", "pcm", "dts", "mat", "wma", "wmapro"])
-    text += nl + "Stream bitrate: " + SiloUIDiagnosticsNumber(stats.bitrate, 1000000000, " bps")
+    text += nl + "Roku-reported bitrate: " + SiloUIDiagnosticsNumber(stats.bitrate, 1000000000, " bps")
     text += " / Buffering: " + SiloUIDiagnosticsNumber(stats.buffering, 100, "%")
     text += nl + "Native position: " + SiloUIDiagnosticsNumber(stats.position, 31536000, " s") + " / " + SiloUIDiagnosticsNumber(stats.duration, 31536000, " s")
     text += nl + "Declared stream format: " + SiloUIDiagnosticsEnum(source.streamFormat, ["mkv", "mp4", "hls", "dash", "ism", "mov", "mp3", "wma"])
@@ -29,8 +29,8 @@ function SiloUIDiagnosticsText(stats as Object, source as Object) as String
     text += nl + "Display mode: " + SiloUIDiagnosticsEnum(stats.outputMode, ["480i", "480p", "576i", "576p", "720p", "720p50", "1080i", "1080p", "1080p24", "1080p25", "1080p30", "1080p50", "1080p60", "2160p24", "2160p25", "2160p30", "2160p50", "2160p60", "2160p24b10", "2160p25b10", "2160p30b10", "2160p50b10", "2160p60b10", "2160p24Hdr", "2160p30Hdr", "2160p60Hdr", "2160p24Dv", "2160p30Dv", "2160p60Dv"])
     ' streamingSegment.hdrModeStr describes content, not physical display output.
     ' https://developer.roku.com/dev/docs/video
-    text += nl + "Native stream HDR: " + SiloUIDiagnosticsRange(stats.hdrMode)
-    text += nl + "Display HDR: Unknown"
+    text += nl + "Reported content HDR: " + SiloUIDiagnosticsRange(stats.hdrMode)
+    text += nl + "Display HDR: Not measured"
     if source.recipeRange <> invalid then text += nl + "Recipe range: " + SiloUIDiagnosticsEnum(source.recipeRange,["sdr","hdr10","hdr10_plus","hlg","dolby_vision"])
 
     original = source.originalPlayback

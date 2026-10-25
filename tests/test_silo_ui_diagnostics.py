@@ -12,7 +12,7 @@ class DiagnosticsTests(unittest.TestCase):
             return run_function([POLICY], 'SiloUIDiagnosticsText', [stats, source], root=Path(root))
     def test_formats_only_known_values_and_distinguishes_source(self):
         text = self.call(dict(state='playing',videoFormat='hevc',audioFormat='aac',position=12,duration=90,bitrate=8000000,buffering=25,outputMode='2160p60'),dict(streamFormat='mkv'))
-        for value in ['Native Video', 'playing', 'hevc', 'aac', '8000000 bps', '25%', '12 s / 90 s', 'Declared stream format: mkv', 'Display mode: 2160p60', 'Native stream HDR: Unknown']:
+        for value in ['Native Video', 'playing', 'hevc', 'aac', '8000000 bps', '25%', '12 s / 90 s', 'Declared stream format: mkv', 'Display mode: 2160p60', 'Reported content HDR: Unknown']:
             self.assertIn(value, text)
     def test_observed_segment_size_is_separate_from_source_and_display(self):
         with tempfile.TemporaryDirectory() as root:
@@ -42,7 +42,7 @@ class DiagnosticsTests(unittest.TestCase):
                       sourceVideo={'codec':'hevc','dv_profile':7,'width':3840,'height':2160}, mappingPhase='selected')
         text = self.call(dict(state='playing',videoFormat='hevc',audioFormat='ac3'),source)
         for value in ['Source: hevc P7 3840 x 2160','Delivery: Original / MKV / unchanged bytes',
-                      'Selected source audio: ac3 en 6 ch','Audio mapping: audio matched', 'Native stream HDR: Unknown']:
+                      'Selected source audio: ac3 en 6 ch','Audio mapping: audio matched', 'Reported content HDR: Unknown']:
             self.assertIn(value,text)
         self.assertNotIn('playing verified',text)
         source['mappingPhase']='recovering'
@@ -53,18 +53,18 @@ class DiagnosticsTests(unittest.TestCase):
         self.assertIn('Source: hevc P7 3840 x 2160',text)
         self.assertIn('Source color: bt2020 / smpte2084 / bt2020nc',text)
         self.assertIn('Recipe range: hdr10',text)
-        self.assertIn('Native stream HDR: Unknown',text)
+        self.assertIn('Reported content HDR: Unknown',text)
         self.assertLessEqual(len(text.splitlines()),17)
 
     def test_progressive_remux_delivery_is_visible_without_inferred_native_hdr(self):
         text = self.call({},dict(streamFormat='mkv',delivery='server_remux_progressive',recipeRange='hdr10'))
         self.assertIn('Recipe range: hdr10',text)
-        self.assertIn('Native stream HDR: Unknown',text)
+        self.assertIn('Reported content HDR: Unknown',text)
         self.assertLessEqual(len(text.splitlines()),17)
 
     def test_segment_hdr_is_allowlisted_and_not_inferred_from_source(self):
-        self.assertIn('Native stream HDR: Dolby Vision', self.call({'hdrMode':'dolby_vision'},{}))
-        self.assertIn('Native stream HDR: Unknown', self.call({'hdrMode':'private-url'},{}))
+        self.assertIn('Reported content HDR: Dolby Vision', self.call({'hdrMode':'dolby_vision'},{}))
+        self.assertIn('Reported content HDR: Unknown', self.call({'hdrMode':'private-url'},{}))
 
     def test_source_range_and_native_content_never_claim_display_hdr(self):
         common=dict(codec='hevc',width=3840,height=2160,bit_depth=10,color_primaries='bt2020',color_transfer='smpte2084',color_space='bt2020nc',dv_config_present=True,dv_bl_compat_id_present=True,dv_bl_present=True)
@@ -84,8 +84,8 @@ class DiagnosticsTests(unittest.TestCase):
                 text=self.call(dict(outputMode='2160p60Dv',hdrMode=native),source)
                 self.assertIn('Source range: '+expected,text)
                 self.assertIn('3840 x 2160',text)
-                self.assertIn('Native stream HDR: '+native_label,text)
-                self.assertIn('Display HDR: Unknown',text)
+                self.assertIn('Reported content HDR: '+native_label,text)
+                self.assertIn('Display HDR: Not measured',text)
                 self.assertIn('Recipe range: dolby_vision',text)
                 self.assertNotIn('Display HDR: Dolby Vision',text)
                 self.assertNotIn('private',text)
@@ -190,11 +190,11 @@ end function
             for alias in ('roInteger', 'roLongInteger'):
                 with self.subTest(alias=alias):
                     text = run_function([policy, boundary], 'NativeDiagnostics', [alias], root=temporary)
-                    self.assertIn('Stream bitrate: 8000000 bps', text)
+                    self.assertIn('Roku-reported bitrate: 8000000 bps', text)
                     self.assertIn('Native position: 12 s / Unavailable', text)
                     self.assertIn('Buffering: Unavailable', text)
 
     def test_documented_10bit_display_mode_does_not_infer_display_hdr(self):
         text=self.call(dict(outputMode='2160p60b10'),{})
         self.assertIn('Display mode: 2160p60b10',text)
-        self.assertIn('Display HDR: Unknown',text)
+        self.assertIn('Display HDR: Not measured',text)
