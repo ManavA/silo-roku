@@ -116,7 +116,7 @@ end function
 function SearchLoadedMatches(cards as Object, titles as Object, query as String, kind as String) as Object
     result = []
     context = SearchQueryContext(query)
-    if Len(context.text) < 2 then return result
+    if Len(context.text) < 1 then return result
     ranked = []
     arrival = 0
     for each card in cards

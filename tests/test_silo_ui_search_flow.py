@@ -343,6 +343,44 @@ end function
         self.assertEqual("library", actual["view"])
         self.assertEqual("Shows • Science Fiction", actual["title"])
 
+    def test_loaded_titles_show_on_each_keystroke_before_remote_debounce(self):
+        actual = self.scene('''
+    m.sourceId="silo:test"
+    m.homeLoadedScope={provider:m.provider,sourceId:m.sourceId,profileId:m.profileId,generation:m.generation}
+    m.homeRows=[{items:[{sourceId:m.sourceId,itemId:"arrival",title:"Arrival",type:"movie"},{sourceId:m.sourceId,itemId:"blade",title:"Blade",type:"movie"}]}]
+    m.keyboard.text="A":onSearchText()
+    single=m.searchGrid.content.getChildCount():singleHint=m.searchHint.text:singleTimer=m.searchTimer.control
+    m.keyboard.text="Arr":onSearchText()
+    immediate=m.searchGrid.content.getChild(0).item.itemId:before=m.requests.Count()
+    onSearchTimer():old=m.searchToken
+    m.keyboard.text="Bl":onSearchText()
+    SearchResult("search_results",{ok:true},{items:[{sourceId:m.sourceId,itemId:"stale",title:"Arrival",type:"movie"}]},old)
+    current=m.searchGrid.content.getChild(0).item.itemId:pending=m.requests.Count()
+    onSearchTimer()
+    SearchResult("search_results",{ok:true},{items:[{sourceId:m.sourceId,itemId:"fresh",title:"Blade fresh",type:"movie"}]},m.searchToken)
+    print FormatJson({single:single,singleHint:singleHint,singleTimer:singleTimer,immediate:immediate,before:before,current:current,pending:pending,total:m.requests.Count(),final:m.searchGrid.content.getChild(0).item.itemId})
+''')
+        self.assertEqual(2, actual['single'])
+        self.assertIn('Incomplete', actual['singleHint'])
+        self.assertNotIn('Searching', actual['singleHint'])
+        self.assertEqual('stop', actual['singleTimer'])
+        self.assertEqual(dict(immediate='arrival',before=0,current='blade',pending=1,total=2,final='fresh'), {k:actual[k] for k in ['immediate','before','current','pending','total','final']})
+
+    def test_instant_loaded_search_is_scope_fenced_and_clearable(self):
+        actual = self.scene('''
+    m.sourceId="silo:test"
+    m.homeLoadedScope={provider:m.provider,sourceId:m.sourceId,profileId:m.profileId,generation:m.generation}
+    m.homeRows=[{items:[{sourceId:m.sourceId,itemId:"movie",title:"Arrival",type:"movie"},{sourceId:m.sourceId,itemId:"show",title:"Arrow",type:"series"}]}]
+    SearchSyncKind():m.searchKind="series":m.keyboard.text="A":onSearchText()
+    filtered=m.searchGrid.content.getChild(0).item.itemId
+    m.profileId="other":onSearchText():other=m.searchGrid.content.getChildCount()
+    m.profileId="p1":onSearchText():returned=m.searchGrid.content.getChildCount()
+    m.generation=2:onSearchText():generation=m.searchGrid.content.getChildCount()
+    m.keyboard.text="":onSearchText()
+    print FormatJson({filtered:filtered,other:other,returned:returned,generation:generation,empty:m.searchGrid.content.getChildCount(),timer:m.searchTimer.control,requests:m.requests.Count()})
+''')
+        self.assertEqual(dict(filtered='show',other=0,returned=2,generation=0,empty=0,timer='stop',requests=0), actual)
+
     def test_loaded_titles_preview_then_server_owns_order_and_cursor(self):
         actual = self.scene('''
     m.sourceId="silo:test"
@@ -635,7 +673,7 @@ end function
     cancelled=m.requests.Count():onSearchTimer()
     print FormatJson({opened:opened,cancelled:cancelled,requests:m.requests.Count(),timer:m.searchTimer.control})
 ''')
-        self.assertEqual(actual, dict(opened=0, cancelled=0, requests=1, timer='start'))
+        self.assertEqual(actual, dict(opened=0, cancelled=0, requests=1, timer='stop'))
 
     def test_shows_filter_retry_and_scope_reset(self):
         actual = self.scene('''

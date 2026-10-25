@@ -51,6 +51,8 @@ def _execute(files, body: str, root: Path, result_expression: str = "invalid", h
     # brs lacks these native SceneGraph Task/LabelList implementations. Ignore
     # only their exact XML scan warnings; other diagnostics still fail the run.
     task_warnings = {
+        "Warning: XML component 'LanDiscoveryTask' extends unknown component 'Task'. Ignoring extension.",
+        "Warning: XML component 'LanIdentityTask' extends unknown component 'Task'. Ignoring extension.",
         "Warning: XML component 'HomeCacheTask' extends unknown component 'Task'. Ignoring extension.",
         "Warning: XML component 'ApiTask' extends unknown component 'Task'. Ignoring extension.",
         "Warning: XML component 'EpisodeNeighborTask' extends unknown component 'Task'. Ignoring extension.",

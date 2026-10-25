@@ -257,10 +257,14 @@ sub onSearchText()
     m.searchGrid.content = CreateObject("roSGNode", "ContentNode")
     if m.view = "search" and m.zone = "searchGrid" then SetZone("keyboard")
     m.searchHint.text = SearchStatus("Searching…")
-    if Len(m.keyboard.text.Trim()) < 2
+    text = m.keyboard.text.Trim()
+    if text = "" or (Len(text) < 2 and m.provider <> "silo")
         m.searchHint.text = SearchPrompt()
         return
     end if
+    m.searchOwner = {query:text, provider:m.provider, sourceId:m.sourceId, profileId:m.profileId, generation:m.generation, kind:m.searchKind}
+    SearchShowLoaded()
+    if Len(text) < 2 then return
     m.searchTimer.control = "start"
 end sub
 
@@ -278,6 +282,7 @@ sub SearchResetPages()
 end sub
 
 sub onSearchTimer()
+    m.searchTimer.control = "stop"
     SearchSyncKind()
     m.searchReload = false
     m.searchToken = m.searchToken + 1
@@ -329,7 +334,7 @@ sub SearchRememberLoaded(incoming as Object)
 end sub
 
 sub SearchShowLoaded()
-    if m.provider <> "silo" or not SearchContextCurrent() or m.searchPages <> 0 or m.searchLoading <> true then return
+    if m.provider <> "silo" or not SearchContextCurrent() or m.searchPages <> 0 then return
     SearchEnsureLoadedScope()
     incoming = []
     if SearchLoadedScopeCurrent(m.homeLoadedScope) and type(m.homeRows) = "roArray"
@@ -363,7 +368,9 @@ sub SearchShowLoaded()
         m.searchGrid.content.appendChild(ItemNode(item))
     end for
     m.searchProvisional = matches.Count() > 0
-    if m.searchProvisional then m.searchHint.text = SearchStatus("Loaded titles · Incomplete · Searching…")
+    message = "Loaded titles · Incomplete"
+    if Len(m.searchOwner.query) >= 2 then message = message + " · Searching…"
+    if m.searchProvisional or Len(m.searchOwner.query) < 2 then m.searchHint.text = SearchStatus(message)
 end sub
 
 function SearchOwnerCurrent() as Boolean
@@ -464,6 +471,7 @@ end sub
 
 sub SearchResume()
     if not SearchContextCurrent() or m.searchLoading = true or m.searchFailed = true then return
+    if m.searchTimer.control = "start" then return
     if Len(m.searchOwner.query) < 2 then return
     if m.searchPages = 0
         SearchPage()
@@ -508,7 +516,7 @@ function SearchKey(key as String) as Boolean
     if key = "options" and m.provider = "silo"
         SearchSyncKind()
         m.searchOptionsQuery = m.keyboard.text.Trim()
-        m.searchOptionsDebounce = not SearchOwnerCurrent()
+        m.searchOptionsDebounce = not SearchOwnerCurrent() or m.searchTimer.control = "start"
         if m.searchOptionsDebounce then m.searchTimer.control = "stop"
         m.searchOptionsContext = BrowseCaptureContext()
         BrowseDialog("Search • " + SearchKindLabel(), ["All titles", "Movies", "Shows", "Search people", "Recent searches", "Cancel"], "onSearchOption")
