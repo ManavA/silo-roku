@@ -248,6 +248,7 @@ end sub
 ''')
                 setup += 'm.keyboard={}:m.searchTimer={}:m.pollTimer={}\n'
             if actual_onboarding_ui:
+                files += [ROOT/'components/SiloUILan.brs']
                 ui_boundary=boundary.read_text()
                 for name in ('ShowView','ObScreen','HomeCacheYield','HomeCacheRetire'):
                     ui_boundary=re.sub(r'(?ms)^sub '+name+r'\(.*?^end sub\n','',ui_boundary)

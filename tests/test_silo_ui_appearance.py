@@ -66,7 +66,7 @@ end function
         # Only OS registry and SceneGraph construction are replaced. The full
         # Settings -> palette -> node updates -> registry -> launch path is real.
         with tempfile.TemporaryDirectory() as root:
-            names=['SiloUIOnboarding','SiloUIAppearance','SiloUIScene','SiloUIHome','SiloUIPlayer','SiloUINavigation','SiloUIDetail','SiloUILibrary','SiloUILibraries','SiloUIRobustness']
+            names=['SiloUIOnboarding','SiloUIAppearance','SiloUIScene','SiloUIHome','SiloUIPlayer','SiloUINavigation','SiloUIDetail','SiloUILibrary','SiloUILibraries','SiloUIRobustness','SiloUILan']
             source='\n'.join((ROOT/'components'/f'{name}.brs').read_text() for name in names)
             source+='\n'+(ROOT/'source/core/SiloUIFormat.brs').read_text()
             source+='\n'+(ROOT/'source/core/SiloUINavigationPolicy.brs').read_text()

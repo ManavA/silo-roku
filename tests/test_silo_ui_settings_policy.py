@@ -272,18 +272,21 @@ class SiloUISettingsPolicyTests(unittest.TestCase):
             fixture = Path(root)/'fixture.brs'
             fixture.write_text(source+'\n'+helpers+'\nfunction SiloUIBeginTransition(choice as Object) as Boolean\n return false\nend function\nsub SiloUIMemoryPressure()\n PlayerDiscardPrebuffer()\nend sub')
             return json.loads(run_brightscript([POLICY,ROOT/'components/SiloUISubtitleArtifact.brs',ROOT/'source/core/SiloUIFormat.brs',ROOT/'source/core/TrackPreference.brs',ROOT/'components/SiloUIDetail.brs',fixture],body,root=Path(root)).splitlines()[-1])
-    def test_new_silo_login_requests_server_address_before_network(self):
+    def test_new_silo_login_offers_manual_address_and_discovery_before_network(self):
         actual = self.component('SiloUIOnboarding.brs', '''
             m.calls=[] : m.pollTimer={control:"start"}
             ObStartSilo()
-            print FormatJson({calls:m.calls,mode:m.obMode})
-        ''', [('ObScreen','sub ObScreen(a as String,b as String,c as String,d as String,e as Object)\nend sub'),
+            print FormatJson({calls:m.calls,mode:m.obMode,choices:m.choices})
+        ''', [('ObScreen','sub ObScreen(a as String,b as String,c as String,d as String,e as Object)\n m.choices=e\nend sub'),
               ('ObServerAddressDialog','sub ObServerAddressDialog()\n m.calls.Push("address")\nend sub')], '''
             sub Api(action as String, params as Object, purpose as String, extra=invalid as Dynamic, provider="" as String)
                 m.calls.Push(action)
             end sub
         ''')
-        self.assertEqual(actual, {'calls':['address'],'mode':''})
+        self.assertEqual(actual, {'calls':[],'mode':'','choices':[
+            {'label':'Enter server address','action':'silo_address'},
+            {'label':'Find servers on this network','action':'silo_find'},
+            {'label':'Back','action':'sources'}]})
 
     def test_server_dialog_submits_only_the_entered_address_and_clears(self):
         actual = self.component('SiloUIOnboarding.brs', '''
